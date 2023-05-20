@@ -664,12 +664,12 @@ int main(void)
  800070a:	f000 f88b 	bl	8000824 <MX_USART3_UART_Init>
   MX_USB_OTG_FS_PCD_Init();
  800070e:	f000 f8b9 	bl	8000884 <MX_USB_OTG_FS_PCD_Init>
-  /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 256);
+
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 512);
  8000712:	4b0a      	ldr	r3, [pc, #40]	; (800073c <main+0x50>)
  8000714:	1d3c      	adds	r4, r7, #4
  8000716:	461d      	mov	r5, r3
