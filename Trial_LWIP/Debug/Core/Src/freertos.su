@@ -1,1 +1,7 @@
-../Core/Src/freertos.c:62:6:vApplicationGetIdleTaskMemory	24	static
+../Core/Src/freertos.c:84:6:vApplicationGetIdleTaskMemory	24	static
+../Core/Src/freertos.c:95:6:MqttClientSubTask	16	static
+../Core/Src/freertos.c:133:6:MqttClientPubTask	40	static
+../Core/Src/freertos.c:152:5:MqttConnectBroker	120	static
+../Core/Src/freertos.c:195:6:MqttMessageArrived	24	static
+../Core/Src/freertos.c:206:6:EngagePin	8	static
+../Core/Src/freertos.c:210:6:EngagePin1	8	static

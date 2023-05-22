@@ -24,7 +24,11 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <string.h>
+#include "lwip.h"
+#include "lwip/api.h"
+#include "MQTTClient.h"
+#include "MQTTInterface.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -34,6 +38,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define BROKER_IP		"10.42.0.84"
+#define MQTT_PORT		1883
+#define MQTT_BUFSIZE	1024
 
 /* USER CODE END PD */
 
@@ -44,12 +51,27 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
+extern struct netif gnetif; //extern gnetif
 
+osThreadId mqttClientSubTaskHandle;  //mqtt client task handle
+osThreadId mqttClientPubTaskHandle;  //mqtt client task handle
+
+Network net; //mqtt network
+MQTTClient mqttClient; //mqtt client
+
+uint8_t sndBuffer[MQTT_BUFSIZE]; //mqtt send buffer
+uint8_t rcvBuffer[MQTT_BUFSIZE]; //mqtt receive buffer
+uint8_t msgBuffer[MQTT_BUFSIZE]; //mqtt message buffer
 /* USER CODE END Variables */
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-
+void MqttClientSubTask(void const *argument); //mqtt client subscribe task function
+void MqttClientPubTask(void const *argument); //mqtt client publish task function
+int  MqttConnectBroker(void); 				//mqtt broker connect function
+void MqttMessageArrived(MessageData* msg); //mqtt message callback function
+void EngagePin(void);
+void EngagePin1(void);
 /* USER CODE END FunctionPrototypes */
 
 /* GetIdleTaskMemory prototype (linked to static allocation support) */
@@ -70,6 +92,123 @@ void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackTy
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
+void MqttClientSubTask(void const *argument)
+{
+	while(1)
+	{
+		//waiting for valid ip address
+		if (gnetif.ip_addr.addr == 0 || gnetif.netmask.addr == 0 || gnetif.gw.addr == 0) //system has no valid ip address
+		{
+			osDelay(1000);
+			continue;
+		}
+		else
+		{
+			printf("DHCP/Static IP O.K.\n");
+			break;
+		}
+	}
 
+//	MqttConnectBroker();
+//				osDelay(1000);
+
+	while(1)
+	{
+		if(!mqttClient.isconnected)
+		{
+			//try to connect to the broker
+			MQTTDisconnect(&mqttClient);
+			MqttConnectBroker();
+			osDelay(1000);
+		}
+		else
+		{
+//			EngagePin1();
+			MQTTYield(&mqttClient, 1000); //handle timer
+			osDelay(100);
+		}
+	}
+}
+
+void MqttClientPubTask(void const *argument)
+{
+	const char* str = "MQTT message from STM32";
+	MQTTMessage message;
+
+	while(1)
+	{
+		if(mqttClient.isconnected)
+		{
+			message.payload = (void*)str;
+			message.payloadlen = strlen(str);
+
+			MQTTPublish(&mqttClient, "test", &message); //publish a message
+		}
+
+		osDelay(5000);
+	}
+}
+
+int MqttConnectBroker()
+{
+	int ret;
+
+	NewNetwork(&net);
+	ret = ConnectNetwork(&net, BROKER_IP, MQTT_PORT);
+	if(ret != MQTT_SUCCESS)
+	{
+		printf("ConnectNetwork failed.\n");
+		return -1;
+	}
+
+	MQTTClientInit(&mqttClient, &net, 1000, sndBuffer, sizeof(sndBuffer), rcvBuffer, sizeof(rcvBuffer));
+
+	MQTTPacket_connectData data = MQTTPacket_connectData_initializer;
+	data.willFlag = 0;
+	data.MQTTVersion = 3;
+	data.clientID.cstring = "STM32F4";
+	data.username.cstring = "STM32F4";
+	data.password.cstring = "";
+	data.keepAliveInterval = 60;
+	data.cleansession = 1;
+
+	ret = MQTTConnect(&mqttClient, &data);
+	if(ret != MQTT_SUCCESS)
+	{
+		printf("MQTTConnect failed.\n");
+		return ret;
+	}
+	osDelay(500);
+
+	ret = MQTTSubscribe(&mqttClient, "test", QOS0, MqttMessageArrived);
+	if(ret != MQTT_SUCCESS)
+	{
+		printf("MQTTSubscribe failed.\n");
+		return ret;
+	}
+	osDelay(500);
+
+	printf("MQTT_ConnectBroker O.K.\n");
+	return MQTT_SUCCESS;
+}
+
+void MqttMessageArrived(MessageData* msg)
+{
+	HAL_GPIO_TogglePin(GPIOB, LD3_Pin); //toggle pin when new message arrived
+
+	MQTTMessage* message = msg->message;
+	memset(msgBuffer, 0, sizeof(msgBuffer));
+	memcpy(msgBuffer, message->payload,message->payloadlen);
+
+	printf("MQTT MSG[%d]:%s\n", (int)message->payloadlen, msgBuffer);
+}
+
+void EngagePin(void) {
+	HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
+}
+
+void EngagePin1(void) {
+	HAL_GPIO_TogglePin(GPIOB, LD1_Pin);
+}
 /* USER CODE END Application */
 

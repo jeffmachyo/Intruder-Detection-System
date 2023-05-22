@@ -49,6 +49,9 @@ PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
 osThreadId defaultTaskHandle;
 /* USER CODE BEGIN PV */
+extern osThreadId mqttClientSubTaskHandle;  //mqtt client task handle
+extern osThreadId mqttClientPubTaskHandle;  //mqtt client task handle
+
 
 /* USER CODE END PV */
 
@@ -61,7 +64,9 @@ static void MX_USB_OTG_FS_PCD_Init(void);
 void StartDefaultTask(void const * argument);
 
 /* USER CODE BEGIN PFP */
-
+extern void MqttClientSubTask(void const *argument); //mqtt client subscribe task function
+extern void MqttClientPubTask(void const *argument); //mqtt client publish task function
+extern void EngagePin(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -130,11 +135,11 @@ int main(void)
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 512);
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 256);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
+
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
@@ -350,10 +355,16 @@ void StartDefaultTask(void const * argument)
   /* init code for LWIP */
   MX_LWIP_Init();
   /* USER CODE BEGIN 5 */
+  osThreadDef(mqttClientSubTask, MqttClientSubTask, osPriorityNormal, 0, configMINIMAL_STACK_SIZE*2); //subscribe task
+  	osThreadDef(mqttClientPubTask, MqttClientPubTask, osPriorityNormal, 0, configMINIMAL_STACK_SIZE*2); //publish task
+  	mqttClientSubTaskHandle = osThreadCreate(osThread(mqttClientSubTask), NULL);
+  	mqttClientPubTaskHandle = osThreadCreate(osThread(mqttClientPubTask), NULL);
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	  EngagePin();
+//	  HAL_GPIO_TogglePin(GPIOB, LD2_Pin); //toggle running led
+    osDelay(500);
   }
   /* USER CODE END 5 */
 }
