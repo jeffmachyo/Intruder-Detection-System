@@ -77,8 +77,8 @@ all: main-build
 main-build: Trial_LWIP.elf secondary-outputs
 
 # Tool invocations
-Trial_LWIP.elf Trial_LWIP.map: $(OBJS) $(USER_OBJS) /home/jeff/STM32CubeIDE/workspace_1.12.1/Trial_LWIP/STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Trial_LWIP.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"/home/jeff/STM32CubeIDE/workspace_1.12.1/Trial_LWIP/STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Trial_LWIP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Trial_LWIP.elf Trial_LWIP.map: $(OBJS) $(USER_OBJS) /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Trial_LWIP.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Trial_LWIP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,0 +1,33 @@
+!SESSION 2023-05-30 11:17:30.453 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-05-30 11:17:43.184
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-05-30 11:17:43.185
+!MESSAGE Log4j2 initialized with config file /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-05-30 11:17:55.930
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-05-30 11:18:28.666
+!MESSAGE Indexed 'Trial_LWIP' (136 sources, 322 headers) in 6.4 sec: 22,800 declarations; 132,303 references; 2 unresolved inclusions; 147 syntax errors; 203 unresolved names (0.13%)
+!SESSION 2023-05-30 11:19:06.143 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-05-30 11:19:11.323
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-05-30 11:19:11.323
+!MESSAGE Log4j2 initialized with config file /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-05-30 11:19:20.848
+!MESSAGE Started RMI Server, listening on port 41337
