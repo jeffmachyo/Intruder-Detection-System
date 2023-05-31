@@ -1,0 +1,7 @@
+freertos.c:195:6:MqttMessageArrived	1
+freertos.c:84:6:vApplicationGetIdleTaskMemory	1
+freertos.c:133:6:MqttClientPubTask	2
+freertos.c:152:5:MqttConnectBroker	4
+freertos.c:95:6:MqttClientSubTask	5
+freertos.c:206:6:EngagePin	1
+freertos.c:210:6:EngagePin1	1
