@@ -43,6 +43,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 
+SPI_HandleTypeDef hspi1;
+
 UART_HandleTypeDef huart3;
 
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
@@ -52,6 +54,8 @@ osThreadId defaultTaskHandle;
 extern osThreadId mqttClientSubTaskHandle;  //mqtt client task handle
 extern osThreadId mqttClientPubTaskHandle;  //mqtt client task handle
 
+uint8_t buffer_tx[1] = {0x02};
+uint8_t buffer_rx[1] = {0};
 
 /* USER CODE END PV */
 
@@ -61,12 +65,25 @@ static void MPU_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_FS_PCD_Init(void);
+static void MX_SPI1_Init(void);
 void StartDefaultTask(void const * argument);
 
 /* USER CODE BEGIN PFP */
 extern void MqttClientSubTask(void const *argument); //mqtt client subscribe task function
 extern void MqttClientPubTask(void const *argument); //mqtt client publish task function
 extern void EngagePin(void);
+extern void EngagePin1(void);
+extern void DisEngagePin1(void);
+
+void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
+	if (buffer_rx[0]==1) {
+		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_SET);
+	}
+	else {
+		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_RESET);
+	}
+
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -113,8 +130,9 @@ int main(void)
   MX_GPIO_Init();
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-
+//  HAL_SPI_TransmitReceive_IT(&hspi1, buffer_tx, buffer_rx, 1);
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -212,6 +230,46 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief SPI1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_SPI1_Init(void)
+{
+
+  /* USER CODE BEGIN SPI1_Init 0 */
+
+  /* USER CODE END SPI1_Init 0 */
+
+  /* USER CODE BEGIN SPI1_Init 1 */
+
+  /* USER CODE END SPI1_Init 1 */
+  /* SPI1 parameter configuration*/
+  hspi1.Instance = SPI1;
+  hspi1.Init.Mode = SPI_MODE_MASTER;
+  hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi1.Init.NSS = SPI_NSS_SOFT;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_256;
+  hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi1.Init.CRCPolynomial = 7;
+  hspi1.Init.CRCLength = SPI_CRC_LENGTH_DATASIZE;
+  hspi1.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+  if (HAL_SPI_Init(&hspi1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN SPI1_Init 2 */
+
+  /* USER CODE END SPI1_Init 2 */
+
 }
 
 /**
@@ -362,9 +420,10 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  EngagePin();
-//	  HAL_GPIO_TogglePin(GPIOB, LD2_Pin); //toggle running led
-    osDelay(500);
+	  HAL_SPI_TransmitReceive_IT(&hspi1, buffer_tx, buffer_rx, 1);
+
+    osDelay(20);
+
   }
   /* USER CODE END 5 */
 }

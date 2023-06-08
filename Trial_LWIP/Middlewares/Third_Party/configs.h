@@ -1,0 +1,27 @@
+
+#pragma once
+#ifndef SYS_CTRL_CONFIGS
+#define SYS_CTRL_CONFIGS
+
+typedef struct SYS_CONFIGS SYS_CONFIGS;
+
+struct SYSCONFIGS {
+	bool enableSPI = 0;
+	bool triggerBlueLED = 0;
+	bool triggerRedLED = 0;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif

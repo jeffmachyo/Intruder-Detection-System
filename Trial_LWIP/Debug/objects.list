@@ -25,6 +25,8 @@
 "./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o"
 "./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o"
 "./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o"
+"./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi.o"
+"./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi_ex.o"
 "./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o"
 "./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o"
 "./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o"
@@ -135,3 +137,4 @@
 "./Middlewares/Third_Party/MQTT/MQTTPacket/src/MQTTSubscribeServer.o"
 "./Middlewares/Third_Party/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o"
 "./Middlewares/Third_Party/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o"
+"./Middlewares/Third_Party/peripheral_helper.o"

@@ -5,3 +5,4 @@
 ../Core/Src/freertos.c:195:6:MqttMessageArrived	24	static
 ../Core/Src/freertos.c:206:6:EngagePin	8	static
 ../Core/Src/freertos.c:210:6:EngagePin1	8	static
+../Core/Src/freertos.c:213:6:DisEngagePin1	8	static

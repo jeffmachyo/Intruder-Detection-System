@@ -210,5 +210,8 @@ void EngagePin(void) {
 void EngagePin1(void) {
 	HAL_GPIO_TogglePin(GPIOB, LD1_Pin);
 }
+void DisEngagePin1(void) {
+	HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_RESET);
+}
 /* USER CODE END Application */
 

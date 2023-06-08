@@ -1,0 +1,28 @@
+#ifndef PERIPHERAL_HELPER_H
+#define PERIPHERAL_HELPER_H
+
+
+
+#include "stm32f7xx_hal.h"
+
+
+/*
+ * GPIO Functions
+ */
+
+
+
+
+
+/*
+ * SPI Functions
+ */
+
+HAL_StatusTypeDef ReadRegister(uint8_t addr, uint8_t *byte);
+
+
+
+
+
+
+#endif
