@@ -1,5 +1,8 @@
 "./Core/Src/freertos.o"
+"./Core/Src/gpio_helper.o"
+"./Core/Src/logger.o"
 "./Core/Src/main.o"
+"./Core/Src/spi.o"
 "./Core/Src/stm32f7xx_hal_msp.o"
 "./Core/Src/stm32f7xx_hal_timebase_tim.o"
 "./Core/Src/stm32f7xx_it.o"
@@ -137,4 +140,3 @@
 "./Middlewares/Third_Party/MQTT/MQTTPacket/src/MQTTSubscribeServer.o"
 "./Middlewares/Third_Party/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o"
 "./Middlewares/Third_Party/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o"
-"./Middlewares/Third_Party/peripheral_helper.o"

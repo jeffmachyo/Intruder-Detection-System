@@ -1,0 +1,4 @@
+spi.c:6:6:init_spi	1
+spi.c:16:19:ReadPeripheral	2
+spi.c:32:6:resetSPI	1
+spi.c:37:6:HAL_SPI_TxRxCpltCallback	2

@@ -23,7 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "spi.h"
+#include "sys_cntrl_configs.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,10 +54,11 @@ osThreadId defaultTaskHandle;
 /* USER CODE BEGIN PV */
 extern osThreadId mqttClientSubTaskHandle;  //mqtt client task handle
 extern osThreadId mqttClientPubTaskHandle;  //mqtt client task handle
+extern spi_ spi_obj;
 
-uint8_t buffer_tx[1] = {0x02};
-uint8_t buffer_rx[1] = {0};
-
+//uint8_t buffer_tx[1] = {0x02};
+//uint8_t buffer_rx[1] = {0};
+//extern uint8_t success;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -74,16 +76,8 @@ extern void MqttClientPubTask(void const *argument); //mqtt client publish task 
 extern void EngagePin(void);
 extern void EngagePin1(void);
 extern void DisEngagePin1(void);
+extern void init_spi(spi_* s);
 
-void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
-	if (buffer_rx[0]==1) {
-		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_SET);
-	}
-	else {
-		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_RESET);
-	}
-
-}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -132,6 +126,7 @@ int main(void)
   MX_USB_OTG_FS_PCD_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+  init_spi(&spi_obj);
 //  HAL_SPI_TransmitReceive_IT(&hspi1, buffer_tx, buffer_rx, 1);
   /* USER CODE END 2 */
 
@@ -420,7 +415,9 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  HAL_SPI_TransmitReceive_IT(&hspi1, buffer_tx, buffer_rx, 1);
+//	  IRSENSOR1
+//	  spi_obj.spi_read(buffer_tx[0],buffer_rx,&hspi1);
+	  spi_obj.spi_read(IRSENSOR1,spi_obj.rx_buf,&hspi1);
 
     osDelay(20);
 
