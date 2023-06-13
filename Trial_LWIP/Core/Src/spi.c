@@ -1,7 +1,7 @@
 #include "spi.h"
 
 
-//uint8_t success=0;
+uint8_t success=0;
 
 void init_spi(spi_* s) {
 	s->reset=resetSPI;
@@ -35,7 +35,7 @@ void resetSPI(SPI_HandleTypeDef* ht_spi) {
 }
 
 void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
-//	success=1;
+	success=1;
 	if (spi_obj.rx_buf[0]==1) {
 		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_SET);
 	}
