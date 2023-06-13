@@ -56,9 +56,6 @@ extern osThreadId mqttClientSubTaskHandle;  //mqtt client task handle
 extern osThreadId mqttClientPubTaskHandle;  //mqtt client task handle
 extern spi_ spi_obj;
 
-//uint8_t buffer_tx[1] = {0x02};
-//uint8_t buffer_rx[1] = {0};
-//extern uint8_t success;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,9 +70,7 @@ void StartDefaultTask(void const * argument);
 /* USER CODE BEGIN PFP */
 extern void MqttClientSubTask(void const *argument); //mqtt client subscribe task function
 extern void MqttClientPubTask(void const *argument); //mqtt client publish task function
-extern void EngagePin(void);
-extern void EngagePin1(void);
-extern void DisEngagePin1(void);
+
 extern void init_spi(spi_* s);
 
 /* USER CODE END PFP */
