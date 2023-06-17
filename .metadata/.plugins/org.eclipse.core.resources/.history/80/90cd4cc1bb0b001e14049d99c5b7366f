@@ -1,0 +1,24 @@
+
+#include "process_data.h"
+
+
+pb_SensorData sensor_data_to_pbuf(sensorData* sd,uint8_t *msg_buf,uint32_t* len) {
+	pb_SensorData pb_obj;
+
+//	pb_obj.sensorName = {};
+	pb_obj.sensorID = sd->sensorID;
+//	pb_obj.timeStamp = {};
+	pb_obj.sensorValue = sd->sensorVal;
+
+	return pb_obj;
+}
+sensorData pbuf_to_sensor_data(pb_SensorData* pb_data) {
+	sensorData sd;
+
+
+	sd.sensorID = pb_data->sensorID;
+	sd.sensorVal = pb_data->sensorValue;
+
+
+	return sd;
+}

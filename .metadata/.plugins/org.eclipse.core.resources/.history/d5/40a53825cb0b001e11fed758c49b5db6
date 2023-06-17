@@ -1,0 +1,53 @@
+
+#include "process_data.h"
+
+static sensorData sd1;
+
+static bool decode_string(pb_istream_t *stream, const pb_field_t *field, void **arg);
+static bool encode_string(pb_ostream_t *stream, const pb_field_t *field, void * const *arg);
+
+pb_SensorData sensor_data_to_pbuf(sensorData* sd,uint8_t *msg_buf,uint32_t* len) {
+	copy_(sd, &sd1);
+	pb_SensorData pb_obj;
+
+//	pb_obj.sensorName = {};
+	pb_obj.sensorID = sd->sensorID;
+//	pb_obj.timeStamp = {};
+	pb_obj.sensorValue = sd->sensorVal;
+
+	return pb_obj;
+}
+sensorData pbuf_to_sensor_data(pb_SensorData* pb_data) {
+	sensorData sd;
+
+
+	sd.sensorID = pb_data->sensorID;
+	sd.sensorVal = pb_data->sensorValue;
+
+
+	return sd;
+}
+
+static bool decode_string(pb_istream_t *stream, const pb_field_t *field, void **arg) {
+
+//	if (strlen((const char*)sd1.sensorName)) {
+//		if (!pb_encode_tag_for_field(stream, field))
+//		    return false;
+//
+//		return pb_encode_string(stream,sd1.sensorName, strlen((const char*)sd1.sensorName));
+//	}
+
+	return false;
+}
+static bool encode_string(pb_ostream_t *stream, const pb_field_t *field, void * const *arg) {
+	if (strlen((const char*)sd1.sensorName) && strlen((const char*)sd1.timeStamp)) {
+			if (!pb_encode_tag_for_field(stream, field))
+			    return false;
+
+			pb_encode_string(stream,sd1.sensorName, strlen((const char*)sd1.sensorName));
+			pb_encode_string(stream,sd1.sensorName, strlen((const char*)sd1.timeStamp));
+			return true;
+		}
+
+		return false;
+}

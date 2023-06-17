@@ -1,0 +1,19 @@
+
+
+#ifndef SENSOR_DATA_H
+#define SENSOR_DATA_H
+
+#include<stdint.h>
+
+
+typedef struct sensorData sensorData;
+
+struct sensorData {
+	const char* sensorName;
+	uint8_t sensorID;
+	const char* timeStamp;
+	uint8_t sensorVal;
+};
+
+
+#endif

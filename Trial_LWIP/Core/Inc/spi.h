@@ -1,3 +1,14 @@
+
+/*
+ *  @file           : spi.h
+ *  @brief          : Header for the spi.c file
+ */
+
+
+/*
+ * Define to prevent recursive inclusion
+ */
+
 #ifndef SPI_HELPER_H
 #define SPI_HELPER_H
 
@@ -5,6 +16,7 @@
 
 #include "stm32f7xx_hal.h"
 #include "main.h"
+#include "sensor_data.h"
 
 
 
@@ -19,6 +31,12 @@ struct spi_ {
 	void (*reset)(SPI_HandleTypeDef* ht_spi);
 };
 
+/*
+ * @brief       This function initializes the spi_ struct object.
+ * @param s:    A pointer to a spi_ struct object.
+ * @retval      None
+ */
+
 void init_spi(spi_* s);
 /*
  * @brief       This function serves to read a peripheral device via SPI.
@@ -31,14 +49,34 @@ HAL_StatusTypeDef ReadPeripheral(uint8_t addr, uint8_t *byte,SPI_HandleTypeDef* 
 
 
 /*
- * @brief   Reset the SPI  in case an error occurs
+ * @brief   Reset the SPI connection in case an error occurs
  * @param:  ht_spi pointer to a SPI_HandleTypeDef structure that contains
  * 			the configuration information for a SPI module
- * 	@retval None
+ * @retval  None
  */
 
 void resetSPI(SPI_HandleTypeDef* ht_spi);
 
+/*
+ * @brief   Extracts the first four bytes of the incoming SPI message,
+ * 			which represent the identifier of the sensor sending the data
+ * @param:  sensor_msg Byte of data that has been sent through SPI from the
+ * 			sensor
+ * @retval  uint8_t Byte containing the address of the sensor that sent the
+ * 			message through SPI
+ */
+
+uint8_t extract_sensor_address(uint8_t sensor_msg);
+
+/*
+ * @brief   Extracts the last four bytes of the incoming SPI message,
+ * 			which represents the value of the sensor sending the data
+ * @param:  sensor_msg Byte of data that has been sent through SPI from the
+ * 			sensor
+ * @retval  uint8_t Byte containing the sensor value that has been sent
+ * 			through SPI
+ */
+uint8_t extract_sensor_value(uint8_t sensor_msg);
 
 
 

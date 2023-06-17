@@ -12,7 +12,13 @@
  * Peripheral Identifiers
  */
 
-#define IRSENSOR1 0x02
+#define IRSENSOR1 		0x02
+#define IRSENSOR1NAME 	"IRSensor1"
+
+/*
+ * Peripheral circular buffer size definition
+ */
+#define SENSORBUFFERSIZE 4
 //typedef struct SYS_CONFIGS SYS_CONFIGS;
 
 

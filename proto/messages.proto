@@ -1,0 +1,17 @@
+/*
+ * This file contains the protobuf message structure to be used in 
+ * serializing sensor data before forwarding to the Gateway Device App
+ */ 
+
+
+
+syntax = "proto2";
+package pb;
+
+message SensorData {
+    required string sensorName = 1;
+    required int32 sensorID = 2;
+    required int32 timeStamp = 3;
+    required int32 sensorValue = 4;
+    
+}

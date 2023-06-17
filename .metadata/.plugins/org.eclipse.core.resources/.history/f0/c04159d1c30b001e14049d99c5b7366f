@@ -1,0 +1,23 @@
+
+
+#ifndef SENSOR_DATA_H
+#define SENSOR_DATA_H
+
+#include "stm32f7xx_hal.h"
+#include <stdbool.h>
+
+
+typedef struct sensorData sensorData;
+
+struct sensorData {
+	uint8_t sensorName[25];
+	uint8_t sensorID;
+	uint8_t timeStamp[30];
+	uint8_t sensorVal;
+};
+
+
+bool copy_(sensorData* from,sensorData* to);
+
+
+#endif

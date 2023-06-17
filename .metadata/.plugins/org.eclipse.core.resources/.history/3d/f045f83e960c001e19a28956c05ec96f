@@ -1,0 +1,19 @@
+
+
+#include "sensor_data.h"
+
+bool copy_(sensorData* from,sensorData* to) {
+	memcpy(to->sensorName,from->sensorName,strlen((const char*)from->sensorName)+1);
+	to->sensorID = from->sensorID;
+	to->timeStamp = from ->timeStamp;
+	to->sensorVal = from->sensorVal;
+
+
+	return true;
+}
+
+
+void update_timestamp(sensorData* sd) {
+	sd->timeStamp = HAL_GetTick();
+}
+

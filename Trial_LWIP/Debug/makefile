@@ -9,6 +9,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Middlewares/Third_Party/generated/subdir.mk
 -include Middlewares/Third_Party/MQTT/MQTTPacket/src/subdir.mk
 -include Middlewares/Third_Party/MQTT/subdir.mk
 -include Middlewares/Third_Party/LwIP/system/OS/subdir.mk

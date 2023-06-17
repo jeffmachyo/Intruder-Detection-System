@@ -60,6 +60,7 @@ uint8_t rx_buf[1];
 uint8_t success=0;
 //uint8_t tx_buf = 0xFE;
 uint8_t tx_buf[1] = {0};
+uint8_t test_msg=0; //Used for debugging purposes
 
 HAL_StatusTypeDef g_ret = 0x0;
 /* USER CODE END PV */
@@ -79,6 +80,11 @@ void spiInteractionTaskStart(void const * argument);
 void resetSPI(SPI_HandleTypeDef* ht_spi) {
 	HAL_SPI_DeInit(ht_spi);
 	HAL_SPI_Init(ht_spi);
+}
+
+uint8_t create_message(uint8_t val,uint8_t addr) {
+    val|=(addr<<4);
+    return val;
 }
 /* USER CODE END PFP */
 
@@ -485,8 +491,11 @@ void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi) {
 }
 void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi){
 	if (rx_buf[0]==0x02) {
+		uint8_t msg[1];
 
-		HAL_SPI_Transmit_IT(&hspi1, tx_buf, 1);
+		msg[0] = create_message(tx_buf[0], rx_buf[0]);
+		test_msg = msg[0];
+		HAL_SPI_Transmit_IT(&hspi1, msg, 1);
 		rx_buf[0] = 0;
 //		xSemaphoreGive(spiMutexHandle);
 

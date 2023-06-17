@@ -1,0 +1,10 @@
+
+
+#include "sensor_data.h"
+
+bool copy_(sensorData* from,sensorData* to) {
+	memcpy(to->sensorName,from->sensorName,strlen(from->sensorName)+1);
+	to->sensorID = from->sensorID;
+	memcpy(to->timeStamp,from->timeStamp,strlen(from->timeStamp)+1);
+	to->sensorVal = from->sensorVal;
+}

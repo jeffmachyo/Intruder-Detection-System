@@ -1,0 +1,19 @@
+/*
+ * This file contains functions that will help in serializing
+ * and deserializing the sensor data to protobuf messages.
+ */
+
+
+#ifndef PROCESS_DATA_HELPER_H
+#define PROCESS_DATA_HELPER_H
+
+
+#include "sensor_data.h"
+#include "messages.pb.h"
+
+
+pb_SensorData sensor_data_to_pbuf(sensorData* sd,uint8_t *msg_buf,uint8_t* len);
+sensorData pbuf_to_sensor_data(pb_SensorData* pb_data);
+
+
+#endif
