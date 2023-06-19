@@ -6,8 +6,11 @@ void init_sensor_buffer_obj(sensorData_buf* sb);
 void update_sensor_buffer(sensorData_buf* sb,sensorData sd);
 sensorData sensor_buffer_front(sensorData_buf* sb);
 
+sensorData sensorDataObj;
+volatile sensorData_buf sensorDataBuf;
+
 bool copy_(sensorData* from,sensorData* to) {
-	memcpy(to->sensorName,from->sensorName,strlen((const char*)from->sensorName)+1);
+	strcpy((char*)to->sensorName,(const char*)from->sensorName);
 	to->sensorID = from->sensorID;
 	to->timeStamp = from ->timeStamp;
 	to->sensorVal = from->sensorVal;
@@ -38,21 +41,80 @@ void init_sensor_buffer_obj(sensorData_buf* sb) {
 }
 
 void update_sensor_buffer(sensorData_buf* sb,sensorData sd) {
-	sb->last %=(uint32_t) SENSORBUFFERSIZE;
-
+//	if (sb->last==4) {
+//		sb->last =0;
+//	}
+//	else if (sb->last>4) {
+//		sb->last %=3;
+//	}
+//	sb->last %=3;
+	if (sb->first==4) {
+		sb->first =0;
+	}
+	else if (sb->first>4) {
+		sb->first %=3;
+	}
+//	sb->first %=3;
 	sb->sensor_buffer[sb->last++] = sd;
+	if (sb->last==4) {
+		sb->last =0;
+	}
+	else if (sb->last>4) {
+		sb->last %=3;
+	}
+//	sb->count = (sb->count<(uint32_t)SENSORBUFFERSIZE) ? sb->count+1 : sb->count;
+	if (sb->count<4) {
+		sb->count++;
+	}
+//	sb->count = (sb->count<4) ? sb->count+1 : sb->count;
+//	sb->first = (sb->count==(uint32_t)SENSORBUFFERSIZE && sb->last!=(uint32_t)SENSORBUFFERSIZE) ? sb->first+1 : sb->first;
+//	if (sb->count==4 && sb->last!=3) {
+//
+//		sb->first++;
+//	}
 
-	sb->count = (sb->count<(uint32_t)SENSORBUFFERSIZE) ? sb->count+1 : sb->count;
-	sb->first = (sb->count==(uint32_t)SENSORBUFFERSIZE && sb->last!=(uint32_t)SENSORBUFFERSIZE) ? sb->first+1 : sb->first;
+	if (sb->count==4 ) {
+		if (sb->last==3) {
+			sb->first=0;
+		}
+		else {
+			sb->first++;
+		}
+
+
+	}
+
+
+
+//	if (sb->count==4) {
+//		if (sb->last!=3) {
+//			sb->first++;
+//		}
+//		else {
+//			sb->last=0;
+//		}
+//	}
+
+//	sb->first = (sb->count==4 && sb->last!=4) ? sb->first+1 : sb->first;
 }
 
 
 sensorData sensor_buffer_front(sensorData_buf* sb) {
 	if (sb->count--) {
-		sb->first%=(uint32_t)SENSORBUFFERSIZE;
+		sb->first%=3;
 		return sb->sensor_buffer[sb->first++];
 	}
 	sensorData obj = {.sensorName="",.sensorID=0,.timeStamp=HAL_GetTick(),.sensorVal=0};
 
 	    return obj;
+}
+
+uint8_t extract_sensor_address(uint8_t sensor_msg) {
+
+    return sensor_msg>>4;
+}
+
+uint8_t extract_sensor_value(uint8_t sensor_msg) {
+    uint8_t mask = (1<<4)-1;
+    return sensor_msg&mask;
 }

@@ -1,5 +1,0 @@
-
-#include "peripheral_helper.h"
-
-#define SPI_TIMEOUT HAL_MAX_DELAY
-

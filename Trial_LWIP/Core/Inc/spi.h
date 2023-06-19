@@ -17,7 +17,7 @@
 #include "stm32f7xx_hal.h"
 #include "main.h"
 #include "sensor_data.h"
-
+#include "cmsis_os.h"
 
 
 /*
@@ -57,26 +57,6 @@ HAL_StatusTypeDef ReadPeripheral(uint8_t addr, uint8_t *byte,SPI_HandleTypeDef* 
 
 void resetSPI(SPI_HandleTypeDef* ht_spi);
 
-/*
- * @brief   Extracts the first four bytes of the incoming SPI message,
- * 			which represent the identifier of the sensor sending the data
- * @param:  sensor_msg Byte of data that has been sent through SPI from the
- * 			sensor
- * @retval  uint8_t Byte containing the address of the sensor that sent the
- * 			message through SPI
- */
-
-uint8_t extract_sensor_address(uint8_t sensor_msg);
-
-/*
- * @brief   Extracts the last four bytes of the incoming SPI message,
- * 			which represents the value of the sensor sending the data
- * @param:  sensor_msg Byte of data that has been sent through SPI from the
- * 			sensor
- * @retval  uint8_t Byte containing the sensor value that has been sent
- * 			through SPI
- */
-uint8_t extract_sensor_value(uint8_t sensor_msg);
 
 
 

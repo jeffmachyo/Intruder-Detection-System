@@ -57,8 +57,13 @@ def generate_source_code():
     try:
         os.chdir("proto")
         
-        command = ["protoc", "--plugin=protoc-gen-nanopb=/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/nanopb-src/generator/protoc-gen-nanopb", "--nanopb_out=.", 
-                "./messages.proto"]
+        command = ["protoc", "messages.proto","--plugin=protoc-gen-nanopb=/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/nanopb-src/generator/protoc-gen-nanopb", "--nanopb_out=.", 
+               "--proto_path","/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/nanopb-src/generator/proto","--proto_path","/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/proto"]
+        # command = ["protoc", "--plugin=protoc-gen-nanopb=/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/nanopb-src/generator/protoc-gen-nanopb", "--nanopb_out=.", 
+        #         "./messages.proto","--proto_path","/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/nanopb-src/generator/proto"]
+        
+        # command = ["protoc", "--plugin=protoc-gen-nanopb=/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/nanopb-src/generator/", "--nanopb_out=.", 
+        #         "./messages.proto"]
     
             
         result = subprocess.run(command, check=False, capture_output=True)

@@ -1,6 +1,4 @@
-../Core/Src/spi.c:11:6:init_spi	16	static
-../Core/Src/spi.c:21:19:ReadPeripheral	32	static
-../Core/Src/spi.c:37:6:resetSPI	16	static
-../Core/Src/spi.c:42:6:HAL_SPI_TxRxCpltCallback	24	static
-../Core/Src/spi.c:60:9:extract_sensor_address	16	static
-../Core/Src/spi.c:65:9:extract_sensor_value	24	static
+../Core/Src/spi.c:16:6:init_spi	16	static
+../Core/Src/spi.c:26:19:ReadPeripheral	32	static
+../Core/Src/spi.c:42:6:resetSPI	16	static
+../Core/Src/spi.c:47:6:HAL_SPI_TxRxCpltCallback	96	static

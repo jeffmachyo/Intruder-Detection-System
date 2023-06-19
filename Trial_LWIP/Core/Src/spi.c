@@ -8,6 +8,11 @@ uint8_t extract_sensor_value(uint8_t sensor_msg);
 uint8_t success=0;
 spi_ spi_obj;
 
+extern sensorData sensorDataObj;
+extern volatile sensorData_buf sensorDataBuf;
+extern uint8_t extract_sensor_address(uint8_t sensor_msg);
+extern uint8_t extract_sensor_value(uint8_t sensor_msg);
+
 void init_spi(spi_* s) {
 	s->reset=resetSPI;
 	s->spi_read=ReadPeripheral;
@@ -43,26 +48,27 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
 	success=1;
 
 	uint8_t sensor_val =  extract_sensor_value(spi_obj.rx_buf[0]);
-//	uint8_t sensor_addr = extract_sensor_address(spi_obj.rx_buf[0]);
+	uint8_t sensor_addr = extract_sensor_address(spi_obj.rx_buf[0]);
+
+
+	if (sensor_addr==IRSENSOR1) {
+//		const char* sensor_name = IRSENSOR1NAME;
+		sensorData sensorDataObj1;
+		init_sensor_data_obj((uint8_t*)IRSENSOR1NAME, sensor_addr, sensor_val, &sensorDataObj1);
+		sensorDataBuf.update(&sensorDataBuf, sensorDataObj1);
+//		osDelay(5);
+	}
+
+
 
 	if (sensor_val==1) {
 		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_SET);
 	}
-//	if (spi_obj.rx_buf[0]==1) {
-//			HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_SET);
-//		}
+
 	else {
 		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_RESET);
 	}
 
 }
 
-uint8_t extract_sensor_address(uint8_t sensor_msg) {
 
-    return sensor_msg>>4;
-}
-
-uint8_t extract_sensor_value(uint8_t sensor_msg) {
-    uint8_t mask = (1<<4)-1;
-    return sensor_msg&mask;
-}

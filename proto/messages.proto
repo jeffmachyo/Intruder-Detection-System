@@ -7,9 +7,10 @@
 
 syntax = "proto2";
 package pb;
+import "nanopb.proto";
 
 message SensorData {
-    required string sensorName = 1;
+    required string sensorName = 1[(nanopb).max_size = 40];
     required int32 sensorID = 2;
     required int32 timeStamp = 3;
     required int32 sensorValue = 4;

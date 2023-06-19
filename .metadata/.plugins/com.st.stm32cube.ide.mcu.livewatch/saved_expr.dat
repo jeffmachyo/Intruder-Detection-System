@@ -7,3 +7,7 @@ success
 spi_obj.rx_buf
 buffer_rx[1]
 test_msg
+sd1
+msgBuffer
+sensorDataBuf
+sd3

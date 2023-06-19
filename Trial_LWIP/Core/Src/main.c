@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include "spi.h"
 #include "sys_cntrl_configs.h"
+#include "sensor_data.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -55,7 +56,8 @@ osThreadId defaultTaskHandle;
 extern osThreadId mqttClientSubTaskHandle;  //mqtt client task handle
 extern osThreadId mqttClientPubTaskHandle;  //mqtt client task handle
 extern spi_ spi_obj;
-
+extern volatile sensorData_buf sensorDataBuf;
+extern sensorData sd1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -72,7 +74,7 @@ extern void MqttClientSubTask(void const *argument); //mqtt client subscribe tas
 extern void MqttClientPubTask(void const *argument); //mqtt client publish task function
 
 extern void init_spi(spi_* s);
-
+extern void init_sensor_buffer_obj(sensorData_buf* sb);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -122,6 +124,7 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   init_spi(&spi_obj);
+  init_sensor_buffer_obj(&sensorDataBuf);
 //  HAL_SPI_TransmitReceive_IT(&hspi1, buffer_tx, buffer_rx, 1);
   /* USER CODE END 2 */
 

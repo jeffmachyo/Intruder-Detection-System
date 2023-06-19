@@ -29,6 +29,8 @@
 #include "lwip/api.h"
 #include "MQTTClient.h"
 #include "MQTTInterface.h"
+#include "sensor_data.h"
+#include "process_data.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -62,6 +64,12 @@ MQTTClient mqttClient; //mqtt client
 uint8_t sndBuffer[MQTT_BUFSIZE]; //mqtt send buffer
 uint8_t rcvBuffer[MQTT_BUFSIZE]; //mqtt receive buffer
 uint8_t msgBuffer[MQTT_BUFSIZE]; //mqtt message buffer
+extern volatile sensorData_buf sensorDataBuf; //sensor data buffer
+
+//pb_SensorData pb_recv_obj= pb_SensorData_init_zero;
+sensorData sd1;
+sensorData sd3;
+//sensorData sd4 = sensorDataBuf.front(&sensorDataBuf);
 /* USER CODE END Variables */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -72,6 +80,7 @@ int  MqttConnectBroker(void); 				//mqtt broker connect function
 void MqttMessageArrived(MessageData* msg); //mqtt message callback function
 void EngagePin(void);
 void EngagePin1(void);
+extern bool sensor_data_to_pbuf(sensorData* sd,uint8_t *msg_buf,uint32_t len);
 /* USER CODE END FunctionPrototypes */
 
 /* GetIdleTaskMemory prototype (linked to static allocation support) */
@@ -119,33 +128,49 @@ void MqttClientSubTask(void const *argument)
 			//try to connect to the broker
 			MQTTDisconnect(&mqttClient);
 			MqttConnectBroker();
-			osDelay(1000);
+//			osDelay(1000);
+			vTaskDelay(1000);
 		}
 		else
 		{
 //			EngagePin1();
 			MQTTYield(&mqttClient, 1000); //handle timer
-			osDelay(100);
+//			osDelay(100);
+			vTaskDelay(1000);
 		}
 	}
 }
 
 void MqttClientPubTask(void const *argument)
 {
-	const char* str = "MQTT message from STM32";
+	uint8_t obuffer[pb_SensorData_size];
+	sensorData sd = sensorDataBuf.front(&sensorDataBuf);
+
+	copy_(&sd, &sd3);
+//	copy_(&sd, &sd1);
+	bool res=sensor_data_to_pbuf(&sd,obuffer,sizeof(obuffer));
+
+//	const char* str = "MQTT message from STM32";
 	MQTTMessage message;
 
 	while(1)
 	{
 		if(mqttClient.isconnected)
 		{
-			message.payload = (void*)str;
-			message.payloadlen = strlen(str);
+			if (res) {
+				if (strlen((const char*)sd.sensorName)) {
+					message.payload = (void*)obuffer;
+					message.payloadlen = sizeof(obuffer);
+				}
+	//			message.payload = (void*)str;
+	//			message.payloadlen = strlen(str);
 
-			MQTTPublish(&mqttClient, "test", &message); //publish a message
+				MQTTPublish(&mqttClient, "test", &message); //publish a message
+			}
 		}
 
-		osDelay(5000);
+//		osDelay(1000);
+		vTaskDelay(1000);
 	}
 }
 
@@ -199,6 +224,12 @@ void MqttMessageArrived(MessageData* msg)
 	MQTTMessage* message = msg->message;
 	memset(msgBuffer, 0, sizeof(msgBuffer));
 	memcpy(msgBuffer, message->payload,message->payloadlen);
+
+	pb_SensorData pb_recv_obj= pb_SensorData_init_zero;
+	sensorData sd2 = {.sensorID=0,.sensorName="",.sensorVal=0,.timeStamp=0};
+	message_to_pb_obj(&pb_recv_obj,msgBuffer,sizeof(msgBuffer));
+	pbuf_to_sensor_data(&pb_recv_obj,&sd2);
+	copy_(&sd2, &sd1);
 
 	printf("MQTT MSG[%d]:%s\n", (int)message->payloadlen, msgBuffer);
 }

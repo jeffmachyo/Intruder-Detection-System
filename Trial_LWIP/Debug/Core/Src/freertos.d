@@ -99,7 +99,14 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/MQTT/MQTTPacket/src/StackTrace.h \
  /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/MQTT/MQTTPacket/src/MQTTPacket.h \
  /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/MQTT/MQTTInterface.h \
- /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/MQTT/MQTTInterface.h
+ /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/MQTT/MQTTInterface.h \
+ ../Core/Inc/sensor_data.h ../Core/Inc/sys_cntrl_configs.h \
+ ../Core/Inc/process_data.h ../Core/Inc/sensor_data.h \
+ /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/generated/messages.pb.h \
+ /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/generated/pb.h \
+ /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/generated/pb_encode.h \
+ /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/generated/pb.h \
+ /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/generated/pb_decode.h
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -202,3 +209,12 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
 /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/MQTT/MQTTPacket/src/MQTTPacket.h:
 /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/MQTT/MQTTInterface.h:
 /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/MQTT/MQTTInterface.h:
+../Core/Inc/sensor_data.h:
+../Core/Inc/sys_cntrl_configs.h:
+../Core/Inc/process_data.h:
+../Core/Inc/sensor_data.h:
+/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/generated/messages.pb.h:
+/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/generated/pb.h:
+/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/generated/pb_encode.h:
+/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/generated/pb.h:
+/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/Trial_LWIP/Middlewares/Third_Party/generated/pb_decode.h:

@@ -11,7 +11,7 @@
 
 /* Struct definitions */
 typedef struct _pb_SensorData {
-    pb_callback_t sensorName;
+    char sensorName[40];
     int32_t sensorID;
     int32_t timeStamp;
     int32_t sensorValue;
@@ -23,8 +23,8 @@ extern "C" {
 #endif
 
 /* Initializer values for message structs */
-#define pb_SensorData_init_default               {{{NULL}, NULL}, 0, 0, 0}
-#define pb_SensorData_init_zero                  {{{NULL}, NULL}, 0, 0, 0}
+#define pb_SensorData_init_default               {"", 0, 0, 0}
+#define pb_SensorData_init_zero                  {"", 0, 0, 0}
 
 /* Field tags (for use in manual encoding/decoding) */
 #define pb_SensorData_sensorName_tag             1
@@ -34,11 +34,11 @@ extern "C" {
 
 /* Struct field encoding specification for nanopb */
 #define pb_SensorData_FIELDLIST(X, a) \
-X(a, CALLBACK, REQUIRED, STRING,   sensorName,        1) \
+X(a, STATIC,   REQUIRED, STRING,   sensorName,        1) \
 X(a, STATIC,   REQUIRED, INT32,    sensorID,          2) \
 X(a, STATIC,   REQUIRED, INT32,    timeStamp,         3) \
 X(a, STATIC,   REQUIRED, INT32,    sensorValue,       4)
-#define pb_SensorData_CALLBACK pb_default_field_callback
+#define pb_SensorData_CALLBACK NULL
 #define pb_SensorData_DEFAULT NULL
 
 extern const pb_msgdesc_t pb_SensorData_msg;
@@ -47,7 +47,7 @@ extern const pb_msgdesc_t pb_SensorData_msg;
 #define pb_SensorData_fields &pb_SensorData_msg
 
 /* Maximum encoded size of messages (where known) */
-/* pb_SensorData_size depends on runtime parameters */
+#define pb_SensorData_size                       74
 
 #ifdef __cplusplus
 } /* extern "C" */
