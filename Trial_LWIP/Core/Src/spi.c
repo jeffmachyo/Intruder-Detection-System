@@ -12,6 +12,7 @@ extern sensorData sensorDataObj;
 extern volatile sensorData_buf sensorDataBuf;
 extern uint8_t extract_sensor_address(uint8_t sensor_msg);
 extern uint8_t extract_sensor_value(uint8_t sensor_msg);
+extern osSemaphoreId bufsemHandle;
 
 void init_spi(spi_* s) {
 	s->reset=resetSPI;
@@ -55,7 +56,14 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
 //		const char* sensor_name = IRSENSOR1NAME;
 		sensorData sensorDataObj1;
 		init_sensor_data_obj((uint8_t*)IRSENSOR1NAME, sensor_addr, sensor_val, &sensorDataObj1);
+
+		int txStatus = 0;
+		BaseType_t xHigherPriorityTaskWoken;
 		sensorDataBuf.update(&sensorDataBuf, sensorDataObj1);
+		txStatus = xSemaphoreGiveFromISR(bufsemHandle, &xHigherPriorityTaskWoken);
+		 if (pdPASS == txStatus) {
+		      portEND_SWITCHING_ISR(xHigherPriorityTaskWoken);
+		    }
 //		osDelay(5);
 	}
 

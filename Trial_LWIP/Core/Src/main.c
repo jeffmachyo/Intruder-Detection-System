@@ -52,6 +52,7 @@ UART_HandleTypeDef huart3;
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
 osThreadId defaultTaskHandle;
+osSemaphoreId bufsemHandle;
 /* USER CODE BEGIN PV */
 extern osThreadId mqttClientSubTaskHandle;  //mqtt client task handle
 extern osThreadId mqttClientPubTaskHandle;  //mqtt client task handle
@@ -74,7 +75,7 @@ extern void MqttClientSubTask(void const *argument); //mqtt client subscribe tas
 extern void MqttClientPubTask(void const *argument); //mqtt client publish task function
 
 extern void init_spi(spi_* s);
-extern void init_sensor_buffer_obj(sensorData_buf* sb);
+extern void init_sensor_buffer_obj(volatile sensorData_buf* sb);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -131,6 +132,11 @@ int main(void)
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
+
+  /* Create the semaphores(s) */
+  /* definition and creation of bufsem */
+  osSemaphoreDef(bufsem);
+  bufsemHandle = osSemaphoreCreate(osSemaphore(bufsem), 1);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -416,6 +422,7 @@ void StartDefaultTask(void const * argument)
 //	  IRSENSOR1
 //	  spi_obj.spi_read(buffer_tx[0],buffer_rx,&hspi1);
 	  spi_obj.spi_read(IRSENSOR1,spi_obj.rx_buf,&hspi1);
+
 
     osDelay(20);
 

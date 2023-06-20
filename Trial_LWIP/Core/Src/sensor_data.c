@@ -2,12 +2,12 @@
 
 #include "sensor_data.h"
 
-void init_sensor_buffer_obj(sensorData_buf* sb);
-void update_sensor_buffer(sensorData_buf* sb,sensorData sd);
-sensorData sensor_buffer_front(sensorData_buf* sb);
+void init_sensor_buffer_obj(volatile sensorData_buf* sb);
+void update_sensor_buffer(volatile sensorData_buf* sb,sensorData sd);
+sensorData sensor_buffer_front(volatile sensorData_buf* sb);
 
 sensorData sensorDataObj;
-volatile sensorData_buf sensorDataBuf;
+sensorData_buf sensorDataBuf;
 
 bool copy_(sensorData* from,sensorData* to) {
 	strcpy((char*)to->sensorName,(const char*)from->sensorName);
@@ -32,7 +32,7 @@ void init_sensor_data_obj(uint8_t* sname,uint8_t sensorID,uint8_t sensorVal,sens
 }
 
 
-void init_sensor_buffer_obj(sensorData_buf* sb) {
+void init_sensor_buffer_obj(volatile sensorData_buf* sb) {
 	sb->count=0;
 	sb->first=0;
 	sb->last=0;
@@ -40,7 +40,7 @@ void init_sensor_buffer_obj(sensorData_buf* sb) {
 	sb->update = update_sensor_buffer;
 }
 
-void update_sensor_buffer(sensorData_buf* sb,sensorData sd) {
+void update_sensor_buffer(volatile sensorData_buf* sb,sensorData sd) {
 //	if (sb->last==4) {
 //		sb->last =0;
 //	}
@@ -99,7 +99,7 @@ void update_sensor_buffer(sensorData_buf* sb,sensorData sd) {
 }
 
 
-sensorData sensor_buffer_front(sensorData_buf* sb) {
+sensorData sensor_buffer_front(volatile sensorData_buf* sb) {
 	if (sb->count--) {
 		sb->first%=3;
 		return sb->sensor_buffer[sb->first++];

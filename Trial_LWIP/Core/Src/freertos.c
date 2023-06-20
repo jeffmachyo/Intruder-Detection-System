@@ -65,10 +65,13 @@ uint8_t sndBuffer[MQTT_BUFSIZE]; //mqtt send buffer
 uint8_t rcvBuffer[MQTT_BUFSIZE]; //mqtt receive buffer
 uint8_t msgBuffer[MQTT_BUFSIZE]; //mqtt message buffer
 extern volatile sensorData_buf sensorDataBuf; //sensor data buffer
+extern osSemaphoreId bufsemHandle;
 
 //pb_SensorData pb_recv_obj= pb_SensorData_init_zero;
 sensorData sd1;
 sensorData sd3;
+sensorData sd5;
+sensorData sd6;
 //sensorData sd4 = sensorDataBuf.front(&sensorDataBuf);
 /* USER CODE END Variables */
 
@@ -144,11 +147,16 @@ void MqttClientSubTask(void const *argument)
 void MqttClientPubTask(void const *argument)
 {
 	uint8_t obuffer[pb_SensorData_size];
-	sensorData sd = sensorDataBuf.front(&sensorDataBuf);
+	sensorData sd = {.sensorName="",.sensorID=0,.sensorVal=0,.timeStamp=0};
 
-	copy_(&sd, &sd3);
-//	copy_(&sd, &sd1);
-	bool res=sensor_data_to_pbuf(&sd,obuffer,sizeof(obuffer));
+//	if (xSemaphoreTake(bufsemHandle, portMAX_DELAY)) {
+//
+//		sd = sensorDataBuf.front(&sensorDataBuf);
+//
+////		copy_(&tmp, &sd);
+//	}
+//	//	copy_(&sd, &sd1);
+//		bool res=sensor_data_to_pbuf(&sd,obuffer,sizeof(obuffer));
 
 //	const char* str = "MQTT message from STM32";
 	MQTTMessage message;
@@ -157,15 +165,26 @@ void MqttClientPubTask(void const *argument)
 	{
 		if(mqttClient.isconnected)
 		{
+			if (xSemaphoreTake(bufsemHandle, portMAX_DELAY)) {
+
+				sd = sensorDataBuf.front(&sensorDataBuf);
+
+			//		copy_(&tmp, &sd);
+			}
+				//	copy_(&sd, &sd1);
+			bool res=sensor_data_to_pbuf(&sd,obuffer,sizeof(obuffer));
 			if (res) {
 				if (strlen((const char*)sd.sensorName)) {
+					sd5=sd;
+//					copy_(&sd, &sd1);
 					message.payload = (void*)obuffer;
 					message.payloadlen = sizeof(obuffer);
+					MQTTPublish(&mqttClient, "test", &message); //publish a message
 				}
 	//			message.payload = (void*)str;
 	//			message.payloadlen = strlen(str);
 
-				MQTTPublish(&mqttClient, "test", &message); //publish a message
+//				MQTTPublish(&mqttClient, "test", &message); //publish a message
 			}
 		}
 
@@ -229,7 +248,8 @@ void MqttMessageArrived(MessageData* msg)
 	sensorData sd2 = {.sensorID=0,.sensorName="",.sensorVal=0,.timeStamp=0};
 	message_to_pb_obj(&pb_recv_obj,msgBuffer,sizeof(msgBuffer));
 	pbuf_to_sensor_data(&pb_recv_obj,&sd2);
-	copy_(&sd2, &sd1);
+	sd6=sd2;
+//	copy_(&sd2, &sd1);
 
 	printf("MQTT MSG[%d]:%s\n", (int)message->payloadlen, msgBuffer);
 }

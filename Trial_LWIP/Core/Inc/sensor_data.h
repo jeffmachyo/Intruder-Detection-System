@@ -36,8 +36,8 @@ struct sensorData_buf {
     uint32_t first;
     uint32_t last;
     uint32_t count;
-    sensorData (*front)(sensorData_buf* sd);
-    void (*update)(sensorData_buf* sd,sensorData so);
+    sensorData (*front)(volatile sensorData_buf* sd);
+    void (*update)(volatile sensorData_buf* sd,sensorData so);
 };
 
 
@@ -47,9 +47,9 @@ bool copy_(sensorData* from,sensorData* to);
 void update_timestamp(sensorData* sd);
 
 
-void init_sensor_buffer_obj(sensorData_buf* sb);
-void update_sensor_buffer(sensorData_buf* sb,sensorData sd);
-sensorData sensor_buffer_front(sensorData_buf* sb);
+void init_sensor_buffer_obj(volatile sensorData_buf* sb);
+void update_sensor_buffer(volatile sensorData_buf* sb,sensorData sd);
+sensorData sensor_buffer_front(volatile sensorData_buf* sb);
 
 /*
  * @brief   Extracts the first four bytes of the incoming SPI message,
