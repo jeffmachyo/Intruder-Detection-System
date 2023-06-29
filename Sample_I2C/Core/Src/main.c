@@ -59,7 +59,7 @@ uint8_t toggle=0;
 uint8_t rx_buf[1];
 uint8_t success=0;
 //uint8_t tx_buf = 0xFE;
-uint8_t tx_buf[1] = {0};
+uint8_t tx_buf[2] = {0,0};
 uint8_t test_msg=0; //Used for debugging purposes
 
 HAL_StatusTypeDef g_ret = 0x0;
@@ -412,8 +412,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PA10 */
-  GPIO_InitStruct.Pin = GPIO_PIN_10;
+  /*Configure GPIO pins : PA10 PA12 */
+  GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_12;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
@@ -475,7 +475,19 @@ void IRTask_Start(void const * argument)
 		  tx_buf[0]=0;
 	  }
 
-    osDelay(20);
+	  if(!HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_12))
+	  	  {
+	  		  tx_buf[1]=1;
+	  		  toggle=1;
+
+	  	  }
+	  else
+	  {
+		  toggle=0;
+		  tx_buf[1]=0;
+	  }
+	  vTaskDelay(20);
+//    osDelay(20);
   }
   /* USER CODE END IRTask_Start */
 }
@@ -490,6 +502,7 @@ void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi) {
 	success=1;
 }
 void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi){
+
 	if (rx_buf[0]==0x03) {
 		uint8_t msg[1];
 
@@ -497,8 +510,15 @@ void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi){
 		test_msg = msg[0];
 		HAL_SPI_Transmit_IT(&hspi1, msg, 1);
 		rx_buf[0] = 0;
-//		xSemaphoreGive(spiMutexHandle);
 
+	}
+	else if (rx_buf[0]==0x04) {
+		uint8_t msg[1];
+
+			msg[0] = create_message(tx_buf[1], rx_buf[0]);
+			test_msg = msg[0];
+			HAL_SPI_Transmit_IT(&hspi1, msg, 1);
+			rx_buf[0] = 0;
 	}
 }
 /* USER CODE END Header_spiInteractionTaskStart */
@@ -512,8 +532,8 @@ void spiInteractionTaskStart(void const * argument)
 		  resetSPI(&hspi1);
 	  }
 //	  HAL_SPI_Receive_IT(&hspi1, rx_buf, 1);
-
-    osDelay(20);
+	  vTaskDelay(20);
+//    osDelay(20);
   }
   /* USER CODE END spiInteractionTaskStart */
 }

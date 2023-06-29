@@ -422,9 +422,10 @@ void StartDefaultTask(void const * argument)
 //	  IRSENSOR1
 //	  spi_obj.spi_read(buffer_tx[0],buffer_rx,&hspi1);
 	  spi_obj.spi_read(IRSENSOR1,spi_obj.rx_buf,&hspi1);
-
-
-    osDelay(20);
+	  vTaskDelay(20);
+	  spi_obj.spi_read(IRSENSOR2,spi_obj.rx_buf,&hspi1);
+	  vTaskDelay(20);
+//    osDelay(20);
 
   }
   /* USER CODE END 5 */

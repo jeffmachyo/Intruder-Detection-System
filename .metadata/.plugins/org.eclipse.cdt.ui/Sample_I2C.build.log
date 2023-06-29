@@ -1,10 +1,10 @@
-07:55:49 **** Incremental Build of configuration Debug for project Sample_I2C ****
+12:31:38 **** Incremental Build of configuration Debug for project Sample_I2C ****
 make -j12 all 
 arm-none-eabi-size   Sample_I2C.elf 
    text	   data	    bss	    dec	    hex	filename
-  33340	     24	  18280	  51644	   c9bc	Sample_I2C.elf
+  33436	     24	  18280	  51740	   ca1c	Sample_I2C.elf
 Finished building: default.size.stdout
  
 
-07:55:49 Build Finished. 0 errors, 0 warnings. (took 122ms)
+12:31:38 Build Finished. 0 errors, 0 warnings. (took 116ms)
 

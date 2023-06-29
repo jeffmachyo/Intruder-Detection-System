@@ -7,6 +7,6 @@ main.c:279:13:MX_USART3_UART_Init	2
 main.c:314:13:MX_USB_OTG_FS_PCD_Init	2
 main.c:349:13:MX_GPIO_Init	1
 main.c:410:6:StartDefaultTask	1
-main.c:435:6:MPU_Config	1
-main.c:493:6:HAL_TIM_PeriodElapsedCallback	2
-main.c:510:6:Error_Handler	1
+main.c:436:6:MPU_Config	1
+main.c:494:6:HAL_TIM_PeriodElapsedCallback	2
+main.c:511:6:Error_Handler	1

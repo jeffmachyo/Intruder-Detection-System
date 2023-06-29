@@ -8,9 +8,9 @@ main.c:311:13:MX_TIM1_Init	4
 main.c:360:13:MX_USART2_UART_Init	2
 main.c:393:13:MX_GPIO_Init	1
 main.c:436:6:StartDefaultTask	1
-main.c:454:6:IRTask_Start	2
-main.c:489:6:HAL_SPI_TxCpltCallback	1
-main.c:492:6:HAL_SPI_RxCpltCallback	2
-main.c:505:6:spiInteractionTaskStart	2
-main.c:529:6:HAL_TIM_PeriodElapsedCallback	2
-main.c:546:6:Error_Handler	1
+main.c:454:6:IRTask_Start	3
+main.c:501:6:HAL_SPI_TxCpltCallback	1
+main.c:504:6:HAL_SPI_RxCpltCallback	3
+main.c:525:6:spiInteractionTaskStart	2
+main.c:549:6:HAL_TIM_PeriodElapsedCallback	2
+main.c:566:6:Error_Handler	1

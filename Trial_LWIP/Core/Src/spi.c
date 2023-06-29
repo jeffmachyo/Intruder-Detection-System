@@ -64,18 +64,47 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
 		 if (pdPASS == txStatus) {
 		      portEND_SWITCHING_ISR(xHigherPriorityTaskWoken);
 		    }
+		 if (sensor_val==1) {
+		 		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_SET);
+		 	}
+
+		 	else {
+		 		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_RESET);
+		 	}
 //		osDelay(5);
 	}
 
+	else if (sensor_addr==IRSENSOR2) {
+	//		const char* sensor_name = IRSENSOR1NAME;
+			sensorData sensorDataObj1;
+			init_sensor_data_obj((uint8_t*)IRSENSOR2NAME, sensor_addr, sensor_val, &sensorDataObj1);
+
+			int txStatus = 0;
+			BaseType_t xHigherPriorityTaskWoken;
+			sensorDataBuf.update(&sensorDataBuf, sensorDataObj1);
+			txStatus = xSemaphoreGiveFromISR(bufsemHandle, &xHigherPriorityTaskWoken);
+			 if (pdPASS == txStatus) {
+			      portEND_SWITCHING_ISR(xHigherPriorityTaskWoken);
+			    }
+			 if (sensor_val==1) {
+			 		HAL_GPIO_WritePin(GPIOB, LD2_Pin, GPIO_PIN_SET);
+			 	}
+
+			 	else {
+			 		HAL_GPIO_WritePin(GPIOB, LD2_Pin, GPIO_PIN_RESET);
+			 	}
+	//		osDelay(5);
+		}
 
 
-	if (sensor_val==1) {
-		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_SET);
-	}
 
-	else {
-		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_RESET);
-	}
+//	if (sensor_val==1) {
+//		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_SET);
+//	}
+//
+//	else {
+//		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_RESET);
+//	}
 
 }
 

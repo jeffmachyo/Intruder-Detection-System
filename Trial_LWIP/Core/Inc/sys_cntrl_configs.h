@@ -12,8 +12,10 @@
  * Peripheral Identifiers
  */
 
-#define IRSENSOR1 		0x03
+#define IRSENSOR1 		0x03U
 #define IRSENSOR1NAME 	"IRSensor1"
+#define IRSENSOR2 		0x04U
+#define IRSENSOR2NAME 	"IRSensor2"
 
 /*
  * Peripheral circular buffer size definition
