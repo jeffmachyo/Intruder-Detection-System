@@ -531,7 +531,7 @@ int main(void)
  800060a:	6013      	str	r3, [r2, #0]
 
   /* definition and creation of IR_Task */
-  osThreadDef(IR_Task, IRTask_Start, osPriorityNormal, 0, 128);
+  osThreadDef(IR_Task, IRTask_Start, osPriorityHigh, 0, 128);
  800060c:	4b17      	ldr	r3, [pc, #92]	; (800066c <main+0xd8>)
  800060e:	f107 0420 	add.w	r4, r7, #32
  8000612:	461d      	mov	r5, r3
@@ -1311,10 +1311,10 @@ void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi){
  8000a7a:	b084      	sub	sp, #16
  8000a7c:	af00      	add	r7, sp, #0
  8000a7e:	6078      	str	r0, [r7, #4]
-	if (rx_buf[0]==0x02) {
+	if (rx_buf[0]==0x03) {
  8000a80:	4b0f      	ldr	r3, [pc, #60]	; (8000ac0 <HAL_SPI_RxCpltCallback+0x48>)
  8000a82:	781b      	ldrb	r3, [r3, #0]
- 8000a84:	2b02      	cmp	r3, #2
+ 8000a84:	2b03      	cmp	r3, #3
  8000a86:	d116      	bne.n	8000ab6 <HAL_SPI_RxCpltCallback+0x3e>
 		uint8_t msg[1];
 

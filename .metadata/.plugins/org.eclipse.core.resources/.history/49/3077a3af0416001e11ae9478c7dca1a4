@@ -1,0 +1,71 @@
+#include "spi.h"
+
+
+
+uint8_t extract_sensor_address(uint8_t sensor_msg);
+uint8_t extract_sensor_value(uint8_t sensor_msg);
+
+uint8_t success=0;
+spi_ spi_obj;
+
+void init_spi(spi_* s) {
+	s->reset=resetSPI;
+	s->spi_read=ReadPeripheral;
+	s->rx_buf[0] = 0;
+
+}
+
+
+
+
+HAL_StatusTypeDef ReadPeripheral(uint8_t addr, uint8_t *buffer_rx,SPI_HandleTypeDef* hspi1) {
+	HAL_StatusTypeDef hal_status;
+	uint8_t buffer_tx[1] = {addr};
+	uint8_t val=0x03;
+
+//	hal_status = HAL_SPI_TransmitReceive_IT(hspi1, buffer_tx, buffer_rx, 1);
+	hal_status = HAL_SPI_TransmitReceive_IT(hspi1, &val, buffer_rx, 1);
+
+	if (hal_status!=HAL_OK) {
+		resetSPI(hspi1);
+	}
+
+	return hal_status;
+
+}
+
+
+
+void resetSPI(SPI_HandleTypeDef* ht_spi) {
+	HAL_SPI_DeInit(ht_spi);
+	HAL_SPI_Init(ht_spi);
+}
+
+void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
+
+
+	uint8_t sensor_val =  extract_sensor_value(spi_obj.rx_buf[0]);
+	success=sensor_val;
+//	uint8_t sensor_addr = extract_sensor_address(spi_obj.rx_buf[0]);
+
+	if (sensor_val==1) {
+		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_SET);
+	}
+//	if (spi_obj.rx_buf[0]==1) {
+//			HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_SET);
+//		}
+	else {
+		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_RESET);
+	}
+
+}
+
+uint8_t extract_sensor_address(uint8_t sensor_msg) {
+
+    return sensor_msg>>4;
+}
+
+uint8_t extract_sensor_value(uint8_t sensor_msg) {
+    uint8_t mask = (1<<4)-1;
+    return sensor_msg&mask;
+}

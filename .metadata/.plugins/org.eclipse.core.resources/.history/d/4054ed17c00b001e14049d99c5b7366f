@@ -1,7 +1,0 @@
-
-
-#include "sensor_data.h"
-
-bool copy_(sensorData* from,sensorData* to) {
-	return true;
-}

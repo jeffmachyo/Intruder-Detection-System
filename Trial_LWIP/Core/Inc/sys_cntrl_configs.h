@@ -12,7 +12,7 @@
  * Peripheral Identifiers
  */
 
-#define IRSENSOR1 		0x02
+#define IRSENSOR1 		0x03
 #define IRSENSOR1NAME 	"IRSensor1"
 
 /*

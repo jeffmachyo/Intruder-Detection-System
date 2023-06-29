@@ -1,0 +1,50 @@
+
+#include "process_data.h"
+
+
+
+bool sensor_data_to_pbuf(sensorData* sd,uint8_t *msg_buf,uint32_t len) {
+
+	pb_SensorData pb_obj= pb_SensorData_init_zero;
+	pb_ostream_t ostream_sname;
+
+	strcpy(pb_obj.sensorName,(const char*)sd->sensorName);
+
+	pb_obj.sensorID = sd->sensorID;
+	pb_obj.timeStamp = sd->timeStamp;
+
+	pb_obj.sensorValue = sd->sensorVal;
+
+
+//	ostream_sname = pb_ostream_from_buffer(sensor_name_buf, sizeof(sensor_name_buf));
+	ostream_sname = pb_ostream_from_buffer(msg_buf, len);
+	bool res=0;
+
+	res=pb_encode(&ostream_sname, pb_SensorData_fields, &pb_obj);
+
+	return res;
+}
+
+bool message_to_pb_obj(pb_SensorData* pb_data,uint8_t *msg_buf,uint32_t len) {
+	pb_istream_t stream;
+
+	stream = pb_istream_from_buffer(msg_buf, len);
+	if (!pb_decode(&stream, pb_SensorData_fields, pb_data)) {
+		return false;
+	}
+
+	return true;
+}
+bool pbuf_to_sensor_data(pb_SensorData* pb_data,sensorData* sd) {
+	if (strlen((const char*)pb_data->sensorName)) {
+		strcpy((char*)sd->sensorName,pb_data->sensorName);
+	}
+	sd->sensorID = pb_data->sensorID;
+	sd->sensorVal = pb_data->sensorValue;
+	sd->timeStamp = pb_data->timeStamp;
+	return true;
+}
+
+
+
+

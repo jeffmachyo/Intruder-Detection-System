@@ -1,13 +1,4 @@
 toggle
 tx_buf
 buffer_rx
-buffer_tx
 rx_buf
-success
-spi_obj.rx_buf
-buffer_rx[1]
-test_msg
-sd1
-msgBuffer
-sensorDataBuf
-sd3

@@ -160,7 +160,7 @@ int main(void)
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of IR_Task */
-  osThreadDef(IR_Task, IRTask_Start, osPriorityNormal, 0, 128);
+  osThreadDef(IR_Task, IRTask_Start, osPriorityHigh, 0, 128);
   IR_TaskHandle = osThreadCreate(osThread(IR_Task), NULL);
 
   /* definition and creation of spiInteractionT */
@@ -490,7 +490,7 @@ void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi) {
 	success=1;
 }
 void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi){
-	if (rx_buf[0]==0x02) {
+	if (rx_buf[0]==0x03) {
 		uint8_t msg[1];
 
 		msg[0] = create_message(tx_buf[0], rx_buf[0]);

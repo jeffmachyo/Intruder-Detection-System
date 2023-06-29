@@ -1839,7 +1839,7 @@ void StartDefaultTask(void const * argument)
  8000e86:	685b      	ldr	r3, [r3, #4]
  8000e88:	4a08      	ldr	r2, [pc, #32]	; (8000eac <StartDefaultTask+0x80>)
  8000e8a:	4907      	ldr	r1, [pc, #28]	; (8000ea8 <StartDefaultTask+0x7c>)
- 8000e8c:	2002      	movs	r0, #2
+ 8000e8c:	2003      	movs	r0, #3
  8000e8e:	4798      	blx	r3
 
 
@@ -2765,7 +2765,7 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
 
 	if (sensor_addr==IRSENSOR1) {
  8001432:	f897 3036 	ldrb.w	r3, [r7, #54]	; 0x36
- 8001436:	2b02      	cmp	r3, #2
+ 8001436:	2b03      	cmp	r3, #3
  8001438:	d132      	bne.n	80014a0 <HAL_SPI_TxRxCpltCallback+0x9c>
 //		const char* sensor_name = IRSENSOR1NAME;
 		sensorData sensorDataObj1;

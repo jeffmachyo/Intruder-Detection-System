@@ -1,0 +1,98 @@
+
+
+#include "sensor_data.h"
+
+void init_sensor_buffer_obj(volatile sensorData_buf* sb);
+void update_sensor_buffer(volatile sensorData_buf* sb,sensorData sd);
+sensorData sensor_buffer_front(volatile sensorData_buf* sb);
+
+sensorData sensorDataObj;
+volatile sensorData_buf sensorDataBuf;
+
+bool copy_(sensorData* from,sensorData* to) {
+	strcpy((char*)to->sensorName,(const char*)from->sensorName);
+	to->sensorID = from->sensorID;
+	to->timeStamp = from ->timeStamp;
+	to->sensorVal = from->sensorVal;
+
+
+	return true;
+}
+
+
+void update_timestamp(sensorData* sd) {
+	sd->timeStamp = HAL_GetTick();
+}
+
+void init_sensor_data_obj(uint8_t* sname,uint8_t sensorID,uint8_t sensorVal,sensorData* sd) {
+	memcpy(sd->sensorName,sname,strlen((const char*)sname)+1);
+	sd->sensorID=sensorID;
+	sd->timeStamp = HAL_GetTick();
+	sd->sensorVal = sensorVal;
+}
+
+
+void init_sensor_buffer_obj(volatile sensorData_buf* sb) {
+	sb->count=0;
+	sb->first=0;
+	sb->last=0;
+	sb->front = sensor_buffer_front;
+	sb->update = update_sensor_buffer;
+}
+
+void update_sensor_buffer(volatile sensorData_buf* sb,sensorData sd) {
+
+	if (sb->first==SENSORBUFFERSIZE) {
+			sb->first =0;
+		}
+	else if (sb->first>SENSORBUFFERSIZE) {
+			sb->first %=(SENSORBUFFERSIZE-1);
+		}
+
+	sb->sensor_buffer[sb->last++] = sd;
+	if (sb->last==SENSORBUFFERSIZE) {
+		sb->last =0;
+	}
+	else if (sb->last>SENSORBUFFERSIZE) {
+		sb->last %=(SENSORBUFFERSIZE-1);
+	}
+
+
+	if (sb->count<SENSORBUFFERSIZE) {
+		sb->count++;
+	}
+
+
+	if (sb->count==SENSORBUFFERSIZE ) {
+		if (sb->last==(SENSORBUFFERSIZE-1)) {
+			sb->first=0;
+		}
+		else {
+			sb->first++;
+		}
+
+	}
+
+}
+
+
+sensorData sensor_buffer_front(volatile sensorData_buf* sb) {
+	if (sb->count--) {
+		sb->first%=(SENSORBUFFERSIZE-1);
+//		assert(sb->first<SENSORBUFFERSIZE);
+		return sb->sensor_buffer[sb->first++];
+	}
+	sensorData obj = {.sensorName="",.sensorID=0,.timeStamp=HAL_GetTick(),.sensorVal=0};
+
+	    return obj;
+}
+
+uint8_t extract_sensor_address(uint8_t sensor_msg) {
+
+    return sensor_msg>>4;
+}
+
+uint8_t extract_sensor_value(uint8_t sensor_msg) {
+    uint8_t mask = (1<<4)-1;
+    return sensor_msg&mask;
+}
