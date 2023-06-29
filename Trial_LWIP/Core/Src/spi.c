@@ -53,7 +53,6 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
 
 
 	if (sensor_addr==IRSENSOR1) {
-//		const char* sensor_name = IRSENSOR1NAME;
 		sensorData sensorDataObj1;
 		init_sensor_data_obj((uint8_t*)IRSENSOR1NAME, sensor_addr, sensor_val, &sensorDataObj1);
 
@@ -71,11 +70,10 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
 		 	else {
 		 		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_RESET);
 		 	}
-//		osDelay(5);
+
 	}
 
 	else if (sensor_addr==IRSENSOR2) {
-	//		const char* sensor_name = IRSENSOR1NAME;
 			sensorData sensorDataObj1;
 			init_sensor_data_obj((uint8_t*)IRSENSOR2NAME, sensor_addr, sensor_val, &sensorDataObj1);
 

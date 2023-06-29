@@ -64,36 +64,7 @@ bool pbuf_to_sensor_data(pb_SensorData* pb_data,sensorData* sd) {
 	return true;
 }
 
-//sensorData pbuf_to_sensor_data(pb_SensorData* pb_data) {
-//	sensorData sd;
-//
-//
-//	sd.sensorID = pb_data->sensorID;
-//	sd.sensorVal = pb_data->sensorValue;
-//
-//
-//	return sd;
-//}
 
-//static bool decode_string(pb_istream_t *stream, const pb_field_t *field, void **arg) {
-//	uint8_t buf[25];
-//
-//	if (!pb_decode(stream, field, buf)) {
-//
-//	    return false;
-//	  }
-//
-//	  memcpy(sd1.sensorName,buf,strlen((const char*)buf+1));
-//	  return true;
-////	if (strlen((const char*)sd1.sensorName)) {
-////		if (!pb_encode_tag_for_field(stream, field))
-////		    return false;
-////
-////		return pb_encode_string(stream,sd1.sensorName, strlen((const char*)sd1.sensorName));
-////	}
-//
-//	return false;
-//}
 bool encode_sensorName(pb_ostream_t *stream, const pb_field_t *field, void * const *arg) {
 	if (strlen((const char*)sd1.sensorName) ) {
 			if (!pb_encode_tag_for_field(stream, field))

@@ -20,7 +20,7 @@
 /*
  * Peripheral circular buffer size definition
  */
-#define SENSORBUFFERSIZE 4
+#define SENSORBUFFERSIZE 4U
 //typedef struct SYS_CONFIGS SYS_CONFIGS;
 
 

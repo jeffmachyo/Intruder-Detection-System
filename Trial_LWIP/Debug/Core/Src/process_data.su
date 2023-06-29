@@ -1,4 +1,4 @@
 ../Core/Src/process_data.c:13:6:sensor_data_to_pbuf	136	static
 ../Core/Src/process_data.c:47:6:message_to_pb_obj	64	static
 ../Core/Src/process_data.c:57:6:pbuf_to_sensor_data	16	static
-../Core/Src/process_data.c:97:6:encode_sensorName	24	static
+../Core/Src/process_data.c:68:6:encode_sensorName	24	static

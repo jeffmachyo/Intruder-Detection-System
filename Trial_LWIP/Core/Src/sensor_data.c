@@ -41,40 +41,29 @@ void init_sensor_buffer_obj(volatile sensorData_buf* sb) {
 }
 
 void update_sensor_buffer(volatile sensorData_buf* sb,sensorData sd) {
-//	if (sb->last==4) {
-//		sb->last =0;
-//	}
-//	else if (sb->last>4) {
-//		sb->last %=3;
-//	}
-//	sb->last %=3;
-	if (sb->first==4) {
+	uint32_t buffer_size = SENSORBUFFERSIZE;
+	if (sb->first==buffer_size) {
 		sb->first =0;
 	}
-	else if (sb->first>4) {
-		sb->first %=3;
+	else if (sb->first>buffer_size) {
+		sb->first %=(buffer_size-1);
 	}
-//	sb->first %=3;
+
 	sb->sensor_buffer[sb->last++] = sd;
-	if (sb->last==4) {
+	if (sb->last==buffer_size) {
 		sb->last =0;
 	}
-	else if (sb->last>4) {
-		sb->last %=3;
+	else if (sb->last>buffer_size) {
+		sb->last %=(buffer_size);
 	}
 //	sb->count = (sb->count<(uint32_t)SENSORBUFFERSIZE) ? sb->count+1 : sb->count;
-	if (sb->count<4) {
+	if (sb->count<buffer_size) {
 		sb->count++;
 	}
-//	sb->count = (sb->count<4) ? sb->count+1 : sb->count;
-//	sb->first = (sb->count==(uint32_t)SENSORBUFFERSIZE && sb->last!=(uint32_t)SENSORBUFFERSIZE) ? sb->first+1 : sb->first;
-//	if (sb->count==4 && sb->last!=3) {
-//
-//		sb->first++;
-//	}
 
-	if (sb->count==4 ) {
-		if (sb->last==3) {
+
+	if (sb->count==buffer_size ) {
+		if (sb->last==(buffer_size-1)) {
 			sb->first=0;
 		}
 		else {
@@ -84,18 +73,38 @@ void update_sensor_buffer(volatile sensorData_buf* sb,sensorData sd) {
 
 	}
 
-
-
-//	if (sb->count==4) {
-//		if (sb->last!=3) {
-//			sb->first++;
+//	Working version
+//	if (sb->first==4) {
+//			sb->first =0;
 //		}
-//		else {
-//			sb->last=0;
+//		else if (sb->first>4) {
+//			sb->first %=3;
 //		}
-//	}
+//
+//		sb->sensor_buffer[sb->last++] = sd;
+//		if (sb->last==4) {
+//			sb->last =0;
+//		}
+//		else if (sb->last>4) {
+//			sb->last %=3;
+//		}
+//	//	sb->count = (sb->count<(uint32_t)SENSORBUFFERSIZE) ? sb->count+1 : sb->count;
+//		if (sb->count<4) {
+//			sb->count++;
+//		}
+//
+//
+//		if (sb->count==4 ) {
+//			if (sb->last==3) {
+//				sb->first=0;
+//			}
+//			else {
+//				sb->first++;
+//			}
+//
+//
+//		}
 
-//	sb->first = (sb->count==4 && sb->last!=4) ? sb->first+1 : sb->first;
 }
 
 
