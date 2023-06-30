@@ -1,32 +1,40 @@
+/*
+ *  @file           : process_data.c
+ *  @brief          : Contains methods for serializing and deserializing sensor to
+ *  				  protobuf data
+ *  				  This wrapper uses the nanopb library
+ */
+
+
+/* Includes ------------------------------------------------------------------*/
 
 #include "process_data.h"
 
+/* Private function prototypes -----------------------------------------------*/
 static sensorData sd1;
 
-//static bool decode_string(pb_istream_t *stream, const pb_field_t *field, void **arg);
 bool encode_sensorName(pb_ostream_t *stream, const pb_field_t *field, void * const *arg);
 
-//static bool decode_timestamp(pb_istream_t *stream, const pb_field_t *field, void **arg);
-//static bool encode_timestamp(pb_ostream_t *stream, const pb_field_t *field, void * const *arg);
-
-//pb_SensorData sensor_data_to_pbuf(sensorData* sd,uint8_t *msg_buf,uint32_t* len) {
+/*
+ * @brief   Converts sensorData object to protobuf object
+ * @param:  sd A sensorData object
+ * @param:  msg_buf Buffer where the output string will be stored
+ * @param:  len length of the output message buffer
+ * @retval  bool returns true if operation is successful
+ *
+ */
 bool sensor_data_to_pbuf(sensorData* sd,uint8_t *msg_buf,uint32_t len) {
 	copy_(sd, &sd1);
-//	pb_SensorData_fields
 	pb_SensorData pb_obj= pb_SensorData_init_zero;
 	pb_ostream_t ostream_sname;
 
-//	uint8_t sensor_name_buf[strlen(((const char*)sd->sensorName)+1)];
 	strcpy(pb_obj.sensorName,(const char*)sd->sensorName);
-//	pb_obj.sensorName.funcs.encode = &encode_sensorName;
 
 	pb_obj.sensorID = sd->sensorID;
 	pb_obj.timeStamp = sd->timeStamp;
 
 	pb_obj.sensorValue = sd->sensorVal;
 
-
-//	ostream_sname = pb_ostream_from_buffer(sensor_name_buf, sizeof(sensor_name_buf));
 	ostream_sname = pb_ostream_from_buffer(msg_buf, len);
 	bool res=0;
 
@@ -34,16 +42,15 @@ bool sensor_data_to_pbuf(sensorData* sd,uint8_t *msg_buf,uint32_t len) {
 
 	return res;
 }
-//sensorData pbuf_to_sensor_data(pb_SensorData* pb_data) {
-//	sensorData sd;
-//
-//
-//	sd.sensorID = pb_data->sensorID;
-//	sd.sensorVal = pb_data->sensorValue;
-//
-//
-//	return sd;
-//}
+
+/*
+ * @brief   Decodes a protobuf message to a string
+ * @param:  pb_data An incoming pb_SensorData protobuf message
+ * @param:  msg_buf container where the output string is to be stored
+ * @param:  len Length of the msg_buf array
+ * @retval  bool returns true if operation is successful
+ *
+ */
 bool message_to_pb_obj(pb_SensorData* pb_data,uint8_t *msg_buf,uint32_t len) {
 	pb_istream_t stream;
 
@@ -54,6 +61,14 @@ bool message_to_pb_obj(pb_SensorData* pb_data,uint8_t *msg_buf,uint32_t len) {
 
 	return true;
 }
+
+/*
+ * @brief   Converts protobuf object to a sensorData object
+ * @param:  pb_data a pb_SensorData protobuf object
+ * @param:  sd A sensorData object to which the parameters are to be copied to
+ * @retval  bool returns true if operation is successful
+ *
+ */
 bool pbuf_to_sensor_data(pb_SensorData* pb_data,sensorData* sd) {
 	if (strlen((const char*)pb_data->sensorName)) {
 		strcpy((char*)sd->sensorName,pb_data->sensorName);
@@ -64,32 +79,20 @@ bool pbuf_to_sensor_data(pb_SensorData* pb_data,sensorData* sd) {
 	return true;
 }
 
-
+/*
+ * @brief   Callback that is necessary to encode strings in protobuf
+ *
+ */
 bool encode_sensorName(pb_ostream_t *stream, const pb_field_t *field, void * const *arg) {
 	if (strlen((const char*)sd1.sensorName) ) {
 			if (!pb_encode_tag_for_field(stream, field))
 			    return false;
 
 			return pb_encode_string(stream,sd1.sensorName, strlen((const char*)sd1.sensorName));
-//			pb_encode_string(stream,sd1.sensorName, strlen((const char*)sd1.timeStamp));
-//			return true;
+
 		}
 
 		return false;
 }
 
-//static bool decode_timestamp(pb_istream_t *stream, const pb_field_t *field, void **arg) {
-//
-//}
-//static bool encode_timestamp(pb_ostream_t *stream, const pb_field_t *field, void * const *arg) {
-//	if (strlen((const char*)sd1.timeStamp)) {
-//				if (!pb_encode_tag_for_field(stream, field))
-//				    return false;
-//
-//				return pb_encode_string(stream,sd1.timeStamp, strlen((const char*)sd1.timeStamp));
-//	//			pb_encode_string(stream,sd1.sensorName, strlen((const char*)sd1.timeStamp));
-//	//			return true;
-//			}
-//
-//			return false;
-//}
+
