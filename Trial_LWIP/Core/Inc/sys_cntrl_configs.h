@@ -1,3 +1,10 @@
+/*
+ *  @file           : sys_cntrl_configs.h
+ *  @brief          : Configurations and constants to be used by the program
+ */
+
+
+
 #ifndef SYS_CTRL_CONFIGS
 #define SYS_CTRL_CONFIGS
 
@@ -21,15 +28,7 @@
  * Peripheral circular buffer size definition
  */
 #define SENSORBUFFERSIZE 4U
-//typedef struct SYS_CONFIGS SYS_CONFIGS;
 
-
-
-//struct SYSCONFIGS {
-//	bool enableSPI = 0;
-//	bool triggerBlueLED = 0;
-//	bool triggerRedLED = 0;
-//};
 
 
 

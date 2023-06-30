@@ -3,6 +3,6 @@
 ../Core/Src/sensor_data.c:27:6:init_sensor_data_obj	32	static
 ../Core/Src/sensor_data.c:35:6:init_sensor_buffer_obj	16	static
 ../Core/Src/sensor_data.c:43:6:update_sensor_buffer	32	static
-../Core/Src/sensor_data.c:111:12:sensor_buffer_front	64	static
-../Core/Src/sensor_data.c:121:9:extract_sensor_address	16	static
-../Core/Src/sensor_data.c:126:9:extract_sensor_value	24	static
+../Core/Src/sensor_data.c:80:12:sensor_buffer_front	64	static
+../Core/Src/sensor_data.c:91:9:extract_sensor_address	16	static
+../Core/Src/sensor_data.c:96:9:extract_sensor_value	24	static

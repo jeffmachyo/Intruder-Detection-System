@@ -26,35 +26,28 @@
 typedef struct spi_ spi_;
 
 struct spi_ {
-	uint8_t rx_buf[1];
+	uint8_t rx_buf[1];      /*!< Specifies the receiver buffer of
+                                     SPI communication channel */
+
+	/*!< Specifies a function that will read data on the SPI bus.
+	  Parameters include the address of the peripheral to be read,a pointer to the receive
+	  buffer address and a pointer to a SPI configs object */
 	HAL_StatusTypeDef (*spi_read)(uint8_t addr, uint8_t *byte,SPI_HandleTypeDef* hspi1);
+
+	/*!< Specifies a function that will reset the SPI communication in the event of an error */
 	void (*reset)(SPI_HandleTypeDef* ht_spi);
 };
 
-/*
- * @brief       This function initializes the spi_ struct object.
- * @param s:    A pointer to a spi_ struct object.
- * @retval      None
- */
 
+/*!< Initialize the SPI object to default values*/
 void init_spi(spi_* s);
-/*
- * @brief       This function serves to read a peripheral device via SPI.
- * @param addr: The address assigned to the peripheral that you want to query
- * @param byte: A pointer to an array of bytes to which the peripheral reding will be stored
- * @retval      HAL status
- */
 
+/*!< Reads the peripheral values via SPI*/
 HAL_StatusTypeDef ReadPeripheral(uint8_t addr, uint8_t *byte,SPI_HandleTypeDef* hspi1);
 
 
-/*
- * @brief   Reset the SPI connection in case an error occurs
- * @param:  ht_spi pointer to a SPI_HandleTypeDef structure that contains
- * 			the configuration information for a SPI module
- * @retval  None
- */
 
+/*!< Resets the SPI interface*/
 void resetSPI(SPI_HandleTypeDef* ht_spi);
 
 

@@ -1,9 +1,18 @@
+/*
+ *  @file           : spi.c
+ *  @brief          : Wrapper for SPI communication
+ *  				  Uses the HAL SPI library
+ */
+
+
+/* Includes ------------------------------------------------------------------*/
 #include "spi.h"
 
 
-
+/* Private function prototypes -----------------------------------------------*/
 uint8_t extract_sensor_address(uint8_t sensor_msg);
 uint8_t extract_sensor_value(uint8_t sensor_msg);
+
 
 uint8_t success=0;
 spi_ spi_obj;
@@ -14,6 +23,12 @@ extern uint8_t extract_sensor_address(uint8_t sensor_msg);
 extern uint8_t extract_sensor_value(uint8_t sensor_msg);
 extern osSemaphoreId bufsemHandle;
 
+/*
+ * @brief       This function initializes the SPI struct object.
+ * @param s:    A pointer to a SPI struct object.
+ * @retval      None
+ */
+
 void init_spi(spi_* s) {
 	s->reset=resetSPI;
 	s->spi_read=ReadPeripheral;
@@ -22,7 +37,12 @@ void init_spi(spi_* s) {
 }
 
 
-
+/*
+ * @brief       This function serves to read a peripheral device via SPI.
+ * @param addr: The address assigned to the peripheral that you want to query
+ * @param byte: A pointer to an array of bytes to which the peripheral reading will be stored
+ * @retval      HAL status
+ */
 
 HAL_StatusTypeDef ReadPeripheral(uint8_t addr, uint8_t *buffer_rx,SPI_HandleTypeDef* hspi1) {
 	HAL_StatusTypeDef hal_status;
@@ -38,13 +58,27 @@ HAL_StatusTypeDef ReadPeripheral(uint8_t addr, uint8_t *buffer_rx,SPI_HandleType
 
 }
 
-
+/*
+ * @brief   Reset the SPI connection in case an error occurs
+ * @param:  ht_spi pointer to a SPI_HandleTypeDef structure that contains
+ * 			the configuration information for a SPI module
+ * @retval  None
+ */
 
 void resetSPI(SPI_HandleTypeDef* ht_spi) {
 	HAL_SPI_DeInit(ht_spi);
 	HAL_SPI_Init(ht_spi);
 }
 
+
+/*
+ * @brief   Callback implemented when the @ReadPeripheral function is called
+ *          specifically, the HAL_SPI_TransmitReceive_IT function
+ *          Creates a sensorData object and adds it into the sensorDataBuffer
+ * @param:  ht_spi pointer to a SPI_HandleTypeDef structure that contains
+ * 			the configuration information for a SPI module
+ * @retval  None
+ */
 void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
 	success=1;
 
@@ -91,18 +125,10 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
 			 	else {
 			 		HAL_GPIO_WritePin(GPIOB, LD2_Pin, GPIO_PIN_RESET);
 			 	}
-	//		osDelay(5);
+
 		}
 
 
-
-//	if (sensor_val==1) {
-//		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_SET);
-//	}
-//
-//	else {
-//		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_RESET);
-//	}
 
 }
 

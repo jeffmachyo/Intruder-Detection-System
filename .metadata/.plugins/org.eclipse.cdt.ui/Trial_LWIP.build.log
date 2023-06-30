@@ -1,4 +1,4 @@
-13:56:33 **** Incremental Build of configuration Debug for project Trial_LWIP ****
+14:07:06 **** Incremental Build of configuration Debug for project Trial_LWIP ****
 make -j12 all 
 arm-none-eabi-size   Trial_LWIP.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   Trial_LWIP.elf
 Finished building: default.size.stdout
  
 
-13:56:33 Build Finished. 0 errors, 0 warnings. (took 169ms)
+14:07:06 Build Finished. 0 errors, 0 warnings. (took 168ms)
 
