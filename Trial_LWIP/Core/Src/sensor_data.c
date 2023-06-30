@@ -1,7 +1,7 @@
 /*
  *  @file           : sensor_data.c
- *  @brief          : Wrapper for SPI communication
- *  				  Uses the HAL SPI library
+ *  @brief          : Contains methods for creating sensorData objects
+ *  				  and a buffer of sensorData objects
  */
 
 
@@ -38,11 +38,8 @@ bool copy_(sensorData* from,sensorData* to) {
 }
 
 /*
- * @brief   Adds a new sensorData object into the sensor buffer.
- * @param:  sb A pointer to a sensor buffer struct which contains an array
- * 			of sensorData objects
- * @param:  sd A sensorData object that is to be added to the sensorData
- * 			buffer
+ * @brief   Adds a timestamp value to the sensorData object.
+ * @param:  sd A pointer to a sensorData object
  * @retval  None
  *
  */
@@ -52,11 +49,11 @@ void update_timestamp(sensorData* sd) {
 
 
 /*
- * @brief   Adds a new sensorData object into the sensor buffer.
- * @param:  sb A pointer to a sensor buffer struct which contains an array
- * 			of sensorData objects
- * @param:  sd A sensorData object that is to be added to the sensorData
- * 			buffer
+ * @brief   Initializes a sensor buffer object with default values
+ * @param:  sname Name assigned to the sensor
+ * @param:  sensorID Unique ID assigned to each sensor
+ * @param:  sensorVal sensor reading
+ * @param:  sd A sensorData object that is to be initialized
  * @retval  None
  *
  */
