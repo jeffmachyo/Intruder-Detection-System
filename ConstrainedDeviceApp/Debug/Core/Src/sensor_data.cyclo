@@ -1,0 +1,8 @@
+sensor_data.c:12:6:copy_	1
+sensor_data.c:23:6:update_timestamp	1
+sensor_data.c:27:6:init_sensor_data_obj	1
+sensor_data.c:35:6:init_sensor_buffer_obj	1
+sensor_data.c:43:6:update_sensor_buffer	8
+sensor_data.c:80:12:sensor_buffer_front	2
+sensor_data.c:91:9:extract_sensor_address	1
+sensor_data.c:96:9:extract_sensor_value	1

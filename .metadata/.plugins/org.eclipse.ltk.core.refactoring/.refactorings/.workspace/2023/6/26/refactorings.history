@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Trial_LWIP&apos; to &apos;ConstrainedDeviceApp&apos;" description="Rename resource &apos;Trial_LWIP&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Trial_LWIP" name="ConstrainedDeviceApp" stamp="1688155402739" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Sample_I2C&apos; to &apos;PeripheralControllerApp&apos;" description="Rename resource &apos;Sample_I2C&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Sample_I2C" name="PeripheralControllerApp" stamp="1688155503868" updateReferences="true"/>
+</session>

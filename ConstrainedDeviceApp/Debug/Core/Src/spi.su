@@ -1,0 +1,4 @@
+../Core/Src/spi.c:17:6:init_spi	16	static
+../Core/Src/spi.c:27:19:ReadPeripheral	32	static
+../Core/Src/spi.c:43:6:resetSPI	16	static
+../Core/Src/spi.c:48:6:HAL_SPI_TxRxCpltCallback	112	static,ignoring_inline_asm

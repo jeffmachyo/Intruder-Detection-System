@@ -83,7 +83,7 @@ def generate_source_code():
         exit(1)
 
 def prepare_generated_files():
-    newpath = r"./Trial_LWIP/Middlewares/Third_Party/generated"
+    newpath = r"./ConstrainedDeviceApp/Middlewares/Third_Party/generated"
     if not os.path.exists(newpath):
         os.makedirs(newpath)
 
