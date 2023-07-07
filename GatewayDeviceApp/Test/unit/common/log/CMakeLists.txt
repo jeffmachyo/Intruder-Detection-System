@@ -1,11 +1,14 @@
 cmake_minimum_required(VERSION 3.16.3)
 
+
 set(This loggerTest)
 project(${This})
 
 set(CMAKE_CXX_STANDARD 17)
 
+include(CTest)
 enable_testing()
+
 set(Headers
     /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.h
 )
@@ -14,7 +17,6 @@ set(Sources
     /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp
 )
 
-include_directories(/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/test_lib)
 add_library(custom_log STATIC ${Sources} ${Headers})
 
 
@@ -37,14 +39,6 @@ target_include_directories(${TEST_TARGET}
                         /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log
                         ${GOOGLETEST_PATH})
 target_link_libraries(${TEST_TARGET} PUBLIC custom_log GTest::GTest GTest::Main)
-
-
-
-link_libraries(${GTEST_LIBRARIES} gtest_main pthread)
-
-set(SIMPLE "runSimpleTests")
-add_executable(${SIMPLE} "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/loggerTest.cpp" "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp")
-
 
 add_test(
     NAME ${This}
