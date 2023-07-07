@@ -1,0 +1,6 @@
+/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/CMakeFiles/custom_log.dir
+/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/CMakeFiles/loggerTest.dir
+/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/CMakeFiles/runSimpleTests.dir
+/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/CMakeFiles/test.dir
+/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/CMakeFiles/edit_cache.dir
+/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/CMakeFiles/rebuild_cache.dir

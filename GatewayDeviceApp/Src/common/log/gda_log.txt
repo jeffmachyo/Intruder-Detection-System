@@ -1,0 +1,12 @@
+Fri Jul  7 15:16:40 2023
+>>Debug: This is a test DEBUG logger message
+Fri Jul  7 15:16:40 2023
+>>Info: This is a test INFO logger message
+Fri Jul  7 15:16:40 2023
+>>Warning: This is a test WARNING logger message
+Fri Jul  7 15:25:50 2023
+>>Debug: This is a test DEBUG logger message
+Fri Jul  7 15:25:50 2023
+>>Info: This is a test INFO logger message
+Fri Jul  7 15:25:50 2023
+>>Warning: This is a test WARNING logger message

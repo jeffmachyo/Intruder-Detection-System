@@ -1,34 +1,57 @@
 #include "custom_log.h"
-
+#include "../../../config/gda_configs.h"
+#include <mutex>
+#include <string>
+ 
 namespace Logger {
     // Global Logging Object.
-    std::unique_ptr<Log> g_log;
 
-    // Initalize our logging object.
-    void startLog(const std::string& filepath) {
-        g_log = std::make_unique<Log>(filepath);
-        Logger::log(Level::Info, "Started logging system.");
-    }
+    mutex m_logmutex;
+    bool append_status = false;
+    
 
     // Method which logs.
-    void log(Level s, const std::string& msg) {
-        g_log->addLog(s, msg);
+    bool log(Level s, const string& msg) {
+        Log l(LOGFILEPATH,append_status);
+        return l.addLog(s,msg);
+        
     }
 
     // Create our global logging object.
-    Log::Log(const std::string& filepath) : m_logfile{} {
-        m_logfile.open(filepath);
-    }
+    Log::Log(const string& filepath,bool& append_status) : m_logfile{} {
+        FILE* file;
 
-    // Add a message to our log.
-    void Log::addLog(Level s, const std::string& msg) {
-        if (m_logfile.is_open()) {
-            m_logfile << levels[static_cast<int>(s)] << ": " << msg << std::endl;
+        file = fopen(filepath.c_str(),"r");
+
+        if (file!=nullptr) {
+            m_logfile.open(filepath,ios_base::app);
+        }
+        // if (!append_status) {
+            // m_logfile.open(filepath);
+            // append_status=true;
+        // }
+        else {
+            m_logfile.open(filepath);
+            // m_logfile.open(filepath,ios_base::app);
         }
     }
 
+    // Add a message to our log.
+    bool Log::addLog(Level s, const string& msg) {
+
+        if (m_logfile.is_open()) {
+            lock_guard<mutex> lock(m_logmutex);
+            auto time_now = chrono::system_clock::now();
+ 
+
+            time_t time_stamp = chrono::system_clock::to_time_t(time_now);
+            m_logfile <<ctime(&time_stamp)<<">>"<< levels[static_cast<int>(s)] << ": " << msg << "\n";
+            return true;
+        }
+        return false;
+    }
+
     Log::~Log() {
-        addLog(Level::Info, "Stopped logging system.");
         m_logfile.close();
     }
 }

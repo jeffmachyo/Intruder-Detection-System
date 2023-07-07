@@ -14,11 +14,17 @@ Use the various error levels by naming them and simply passing the info and what
 // String class for names and parameters passed around.
 #include <string>
 
+#include <chrono>
+#include <ctime> 
+
 #define FATAL Logger::Level::Fatal
 #define ERROR Logger::Level::Error
 #define WARNING Logger::Level::Warning
 #define INFO Logger::Level::Info
 #define DEBUG Logger::Level::Debug
+
+
+using namespace std;
 
 namespace Logger {
     // Severity level enum.
@@ -31,16 +37,16 @@ namespace Logger {
     };
 
     // Initialize the log.
-    void startLog(const std::string& filepath);
+    void startLog(const string& filepath);
 
     // Log a message.
-    void log(Level s, const std::string& msg);
+    bool log(Level s, const string& msg);
 
     // Logging class.
     class Log {
     public:
-        Log(const std::string& filepath);
-        void addLog(Level s, const std::string& msg);
+        Log(const string& filepath,bool& append_status);
+        bool addLog(Level s, const string& msg);
         ~Log();
     private:
         // File for logging.
