@@ -1,2 +1,2 @@
-loggerTest 9 0.00198878
+loggerTest 13 0.00200779
 ---

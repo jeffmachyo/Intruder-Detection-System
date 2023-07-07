@@ -21,11 +21,11 @@
 	TotalVirtualMemory="0"
 	TotalPhysicalMemory="15669"
 	LogicalProcessorsPerPhysical="1"
-	ProcessorClockFrequency="3095.12"
+	ProcessorClockFrequency="3643.03"
 	>
 	<Testing>
-		<StartDateTime>Jul 07 15:25 EDT</StartDateTime>
-		<StartTestTime>1688757950</StartTestTime>
+		<StartDateTime>Jul 07 15:43 EDT</StartDateTime>
+		<StartTestTime>1688759007</StartTestTime>
 		<TestList>
 			<Test>./loggerTest</Test>
 		</TestList>
@@ -36,7 +36,7 @@
 			<FullCommandLine>/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/loggerTest</FullCommandLine>
 			<Results>
 				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.00260201</Value>
+					<Value>0.00219943</Value>
 				</NamedMeasurement>
 				<NamedMeasurement type="numeric/double" name="Processors">
 					<Value>1</Value>
@@ -55,8 +55,8 @@
 				</Measurement>
 			</Results>
 		</Test>
-		<EndDateTime>Jul 07 15:25 EDT</EndDateTime>
-		<EndTestTime>1688757950</EndTestTime>
+		<EndDateTime>Jul 07 15:43 EDT</EndDateTime>
+		<EndTestTime>1688759007</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

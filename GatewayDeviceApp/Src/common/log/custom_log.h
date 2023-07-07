@@ -45,7 +45,7 @@ namespace Logger {
     // Logging class.
     class Log {
     public:
-        Log(const string& filepath,bool& append_status);
+        Log(const string& filepath);
         bool addLog(Level s, const string& msg);
         ~Log();
     private:

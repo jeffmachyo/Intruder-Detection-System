@@ -39,3 +39,10 @@
 286	295	1688757943878687813	libcustom_log.a	b4f7a062a1c3986c
 285	355	1688757943934687853	runSimpleTests	821e3cf538964d9d
 295	355	1688757943934687853	loggerTest	c58820065d5072f2
+1	411	1688758943360173375	CMakeFiles/runSimpleTests.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o	858c67a051685e97
+0	443	1688758943392172047	CMakeFiles/custom_log.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o	83db7da768e37966
+443	454	1688758943404171549	libcustom_log.a	b4f7a062a1c3986c
+1	915	1688758943864152455	CMakeFiles/runSimpleTests.dir/loggerTest.cpp.o	42c5cb8c023099e
+1	920	1688758943872152122	CMakeFiles/loggerTest.dir/loggerTest.cpp.o	f32c659962befe65
+915	978	1688758943928149798	runSimpleTests	821e3cf538964d9d
+920	979	1688758943928149798	loggerTest	c58820065d5072f2

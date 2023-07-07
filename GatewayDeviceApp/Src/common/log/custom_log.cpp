@@ -12,13 +12,13 @@ namespace Logger {
 
     // Method which logs.
     bool log(Level s, const string& msg) {
-        Log l(LOGFILEPATH,append_status);
+        Log l(LOGFILEPATH);
         return l.addLog(s,msg);
         
     }
 
     // Create our global logging object.
-    Log::Log(const string& filepath,bool& append_status) : m_logfile{} {
+    Log::Log(const string& filepath) : m_logfile{} {
         FILE* file;
 
         file = fopen(filepath.c_str(),"r");
