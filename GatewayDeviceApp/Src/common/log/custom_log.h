@@ -16,6 +16,7 @@ Use the various error levels by naming them and simply passing the info and what
 
 #include <chrono>
 #include <ctime> 
+#include <mutex>
 
 #define FATAL Logger::Level::Fatal
 #define ERROR Logger::Level::Error
@@ -27,6 +28,8 @@ Use the various error levels by naming them and simply passing the info and what
 using namespace std;
 
 namespace Logger {
+
+    extern mutex m_logmutex;
     // Severity level enum.
     enum class Level {
         Fatal,
@@ -35,9 +38,6 @@ namespace Logger {
         Info,
         Debug
     };
-
-    // Initialize the log.
-    void startLog(const string& filepath);
 
     // Log a message.
     bool log(Level s, const string& msg);
