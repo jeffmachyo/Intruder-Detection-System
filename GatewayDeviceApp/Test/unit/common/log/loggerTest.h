@@ -18,6 +18,10 @@ protected:
         
     }
 
+public:
+    string readFromLog(const string& filepath);
+    // void testLogRead(const string& p1,const string& p2);
+
 };
 
 
