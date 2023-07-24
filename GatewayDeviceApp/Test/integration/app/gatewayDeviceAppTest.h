@@ -1,3 +1,9 @@
+
+/** @file gatewayDeviceAppTest.h
+ *  Header file for gatewayDeviceAppTest.cpp
+ */
+
+
 #ifndef _GDA_TEST_H
 #define _GDA_TEST_H
 

@@ -1,22 +1,47 @@
 [
 {
   "directory": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build",
-  "command": "/usr/bin/g++ -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/test_lib -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log -g -o CMakeFiles/custom_log.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/gateway_device_app.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/gateway_device_app.cpp",
+  "file": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/gateway_device_app.cpp"
+},
+{
+  "directory": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/device_data_manager.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/device_data_manager.cpp",
+  "file": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/device_data_manager.cpp"
+},
+{
+  "directory": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp",
   "file": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp"
 },
 {
   "directory": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build",
-  "command": "/usr/bin/g++ -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/test_lib -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log -I/home/jeff/local/googletest -g -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/loggerTest.dir/loggerTest.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/loggerTest.cpp",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/base_iot_data.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/base_iot_data.cpp",
+  "file": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/base_iot_data.cpp"
+},
+{
+  "directory": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/sensor_data.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/sensor_data.cpp",
+  "file": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/sensor_data.cpp"
+},
+{
+  "directory": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build",
+  "command": "/usr/bin/g++ -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log -I/home/jeff/local/googletest -g -DGTEST_HAS_PTHREAD=1 -o unit/common/log/CMakeFiles/loggerTest.dir/loggerTest.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/loggerTest.cpp",
   "file": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/loggerTest.cpp"
 },
 {
   "directory": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build",
-  "command": "/usr/bin/g++ -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/test_lib -g -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/runSimpleTests.dir/loggerTest.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/loggerTest.cpp",
-  "file": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/loggerTest.cpp"
+  "command": "/usr/bin/g++ -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app -I/home/jeff/local/googletest -g -DGTEST_HAS_PTHREAD=1 -o integration/app/CMakeFiles/gatewayDeviceAppTest.dir/gatewayDeviceAppTest.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/integration/app/gatewayDeviceAppTest.cpp",
+  "file": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/integration/app/gatewayDeviceAppTest.cpp"
 },
 {
   "directory": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build",
-  "command": "/usr/bin/g++ -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/test_lib -g -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/runSimpleTests.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp",
-  "file": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp"
+  "command": "/usr/bin/g++ -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data -I/home/jeff/local/googletest -g -DGTEST_HAS_PTHREAD=1 -o unit/data/CMakeFiles/baseIotTest.dir/baseIotTest.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/data/baseIotTest.cpp",
+  "file": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/data/baseIotTest.cpp"
+},
+{
+  "directory": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build",
+  "command": "/usr/bin/g++ -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data -I/home/jeff/local/googletest -g -DGTEST_HAS_PTHREAD=1 -o unit/data/sensorData/CMakeFiles/sensorDataTest.dir/sensorDataTest.cpp.o -c /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/data/sensorData/sensorDataTest.cpp",
+  "file": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/data/sensorData/sensorDataTest.cpp"
 }
 ]

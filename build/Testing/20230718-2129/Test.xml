@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-g++"
+	BuildStamp="20230718-2129-Experimental"
+	Name="jeff-pc"
+	Generator="ctest-3.22.1"
+	CompilerName="/usr/bin/g++"
+	CompilerVersion="11.3.0"
+	OSName="Linux"
+	Hostname="jeff-pc"
+	OSRelease="5.19.0-42-generic"
+	OSVersion="#43~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Apr 21 16:51:08 UTC 2"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="154"
+	ProcessorCacheSize="12288"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="10"
+	TotalVirtualMemory="0"
+	TotalPhysicalMemory="15669"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="1004.15"
+	>
+	<Testing>
+		<StartDateTime>Jul 18 17:30 EDT</StartDateTime>
+		<StartTestTime>1689715804</StartTestTime>
+		<TestList>
+			<Test>./integration/app/gatewayDeviceAppTest</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>gatewayDeviceAppTest</Name>
+			<Path>./integration/app</Path>
+			<FullName>./integration/app/gatewayDeviceAppTest</FullName>
+			<FullCommandLine>/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/integration/app/gatewayDeviceAppTest</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>30.004</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/integration/app/gatewayDeviceAppTest</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJxtjMEKwjAQRO/5ij3qoSl+gIeC0JuHtp5KkRjXEGg3IdlW/HsbW4qIcxp4b6YaiSwZGJSl3R4ewQ0gc+Oc6ZExch6Dzk1q16RIrUV73NJBte4PkJxlv/Y4WkYp2mxLB2XvbqpfONJkg6MBaXaRs9H/yN+fpWJ8qtcJJ6ux8L6ZiWihupzhk+6vIdNBzSpwQfeanV+lGYs3d2pTTA==</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jul 18 17:30 EDT</EndDateTime>
+		<EndTestTime>1689715834</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-g++"
+	BuildStamp="20230724-0059-Experimental"
+	Name="jeff-pc"
+	Generator="ctest-3.22.1"
+	CompilerName="/usr/bin/g++"
+	CompilerVersion="11.3.0"
+	OSName="Linux"
+	Hostname="jeff-pc"
+	OSRelease="5.19.0-42-generic"
+	OSVersion="#43~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Apr 21 16:51:08 UTC 2"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="154"
+	ProcessorCacheSize="12288"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="10"
+	TotalVirtualMemory="0"
+	TotalPhysicalMemory="15669"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="4107.44"
+	>
+	<Testing>
+		<StartDateTime>Jul 24 10:13 EDT</StartDateTime>
+		<StartTestTime>1690207981</StartTestTime>
+		<TestList>
+			<Test>./unit/data/sensorData/sensorDataTest</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>sensorDataTest</Name>
+			<Path>./unit/data/sensorData</Path>
+			<FullName>./unit/data/sensorData/sensorDataTest</FullName>
+			<FullCommandLine>/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/data/sensorData/sensorDataTest</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.00158096</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/data/sensorData/sensorDataTest</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNkk1rwzAMhu/+FTo2hzgrO+8wyLbDYC3JuksIQ0vdEPBHseXt78+uS0YCo9bJtp5XL5LVeK0nPYLCSW8KOFmjgFejMaMUJBxVzg7VGE+fEeHDwLqHOXporvp7iIxLBbaXCzg/keCsK+fo4UWaL5QpL/T3ZI1WQgdWUOnPK3hRtBXaGVsj4Xt4ZB00hze4RL/K8aiqxQm9pA+UXrhAp9i9ZtCwuQPlipsWe7SowpTs4XxEynBZC3KNnr2USXLT4g+di2dONPFAhlAWLO/XSKAtj+ZHL5fi32UAi5ovjUJD+8e2fapj71chZ7/wLdTQ====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jul 24 10:13 EDT</EndDateTime>
+		<EndTestTime>1690207981</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

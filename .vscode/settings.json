@@ -1,6 +1,4 @@
 {
-    "cmake.sourceDirectory": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log",
-    "files.associations": {
-        "fstream": "cpp"
-    }
+    "cmake.sourceDirectory": "/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test",
+    
 }

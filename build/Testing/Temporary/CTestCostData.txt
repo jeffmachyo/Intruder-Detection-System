@@ -1,2 +1,5 @@
-loggerTest 13 0.00200779
+loggerTest 30 0.00250606
+gatewayDeviceAppTest 10 147.005
+baseIotTest 6 0.00198625
+sensorDataTest 8 0.00202549
 ---

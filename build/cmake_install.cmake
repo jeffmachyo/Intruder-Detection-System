@@ -1,4 +1,4 @@
-# Install script for directory: /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log
+# Install script for directory: /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,26 @@ endif()
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/common/log/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/integration/app/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/data/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/data/sensorData/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

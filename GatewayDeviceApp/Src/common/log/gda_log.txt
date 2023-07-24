@@ -1,6 +1,888 @@
-Fri Jul  7 15:43:27 2023
+Sat Jul  8 16:46:13 2023
 >>Debug: This is a test DEBUG logger message
-Fri Jul  7 15:43:27 2023
+Sat Jul  8 16:46:13 2023
 >>Info: This is a test INFO logger message
-Fri Jul  7 15:43:27 2023
+Sat Jul  8 16:46:13 2023
 >>Warning: This is a test WARNING logger message
+Sat Jul  8 16:46:13 2023
+>>Error: This is a test ERROR logger message
+Sat Jul  8 16:46:13 2023
+>>Fatal: This is a test FATAL logger message
+Sat Jul  8 16:46:13 2023
+>>Info: I am hereby testing logger reading and writing
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 0
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 0
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 1
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 1
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 2
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 2
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 3
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 4
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 3
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 5
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 6
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 4
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 7
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 8
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 5
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 9
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 10
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 6
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 11
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 12
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 7
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 13
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 14
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 8
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 15
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 16
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 9
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 17
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 18
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 10
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 19
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 11
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 12
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 13
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 14
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 15
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 16
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 17
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 18
+Sat Jul  8 16:46:13 2023
+>>Info: This is a test INFO logger message number: 19
+Sun Jul  9 22:41:06 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Sun Jul  9 22:41:06 2023
+>>Info: Instantiating DeviceDatamanagerClass
+Sun Jul  9 22:41:06 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Sun Jul  9 22:41:06 2023
+>>Info: Successfully started DeviceDataManager...
+Sun Jul  9 22:41:06 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Sun Jul  9 22:46:18 2023
+>>Debug: This is a test DEBUG logger message
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message
+Sun Jul  9 22:46:18 2023
+>>Warning: This is a test WARNING logger message
+Sun Jul  9 22:46:18 2023
+>>Error: This is a test ERROR logger message
+Sun Jul  9 22:46:18 2023
+>>Fatal: This is a test FATAL logger message
+Sun Jul  9 22:46:18 2023
+>>Info: I am hereby testing logger reading and writing
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 1
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 3
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 5
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 0
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 7
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 9
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 11
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 2
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 13
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 15
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 4
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 17
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 19
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 6
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 8
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 10
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 12
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 14
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 16
+Sun Jul  9 22:46:18 2023
+>>Info: This is a test INFO logger message number: 18
+Sun Jul  9 22:49:17 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Sun Jul  9 22:49:17 2023
+>>Info: Instantiating DeviceDatamanagerClass
+Sun Jul  9 22:49:17 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Sun Jul  9 22:49:17 2023
+>>Info: Successfully started DeviceDataManager...
+Sun Jul  9 22:49:17 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Sun Jul  9 22:54:59 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Sun Jul  9 22:54:59 2023
+>>Info: Instantiating DeviceDatamanagerClass
+Sun Jul  9 22:54:59 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Sun Jul  9 22:54:59 2023
+>>Info: Successfully started DeviceDataManager...
+Sun Jul  9 22:54:59 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Sun Jul  9 22:55:02 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Sun Jul  9 22:55:02 2023
+>>Info: Stopping DeviceDataManager...
+Sun Jul  9 22:55:02 2023
+>>Warning: GatewayDeviceApp: Failed to stop Device Data Manager!
+Sun Jul  9 22:57:16 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Sun Jul  9 22:57:16 2023
+>>Info: Instantiating DeviceDatamanagerClass
+Sun Jul  9 22:57:16 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Sun Jul  9 22:57:16 2023
+>>Info: Successfully started DeviceDataManager...
+Sun Jul  9 22:57:16 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Sun Jul  9 22:57:46 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Sun Jul  9 22:57:46 2023
+>>Info: Stopping DeviceDataManager...
+Sun Jul  9 22:57:46 2023
+>>Warning: GatewayDeviceApp: Failed to stop Device Data Manager!
+Sun Jul  9 23:01:06 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Sun Jul  9 23:01:06 2023
+>>Info: Stopping DeviceDataManager...
+Sun Jul  9 23:01:06 2023
+>>Warning: GatewayDeviceApp: Failed to stop Device Data Manager!
+Sun Jul  9 23:07:19 2023
+>>Debug: This is a test DEBUG logger message
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message
+Sun Jul  9 23:07:19 2023
+>>Warning: This is a test WARNING logger message
+Sun Jul  9 23:07:19 2023
+>>Error: This is a test ERROR logger message
+Sun Jul  9 23:07:19 2023
+>>Fatal: This is a test FATAL logger message
+Sun Jul  9 23:07:19 2023
+>>Info: I am hereby testing logger reading and writing
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 0
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 2
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 4
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 6
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 8
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 1
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 10
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 12
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 3
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 14
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 5
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 16
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 7
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 18
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 9
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 11
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 13
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 15
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 17
+Sun Jul  9 23:07:19 2023
+>>Info: This is a test INFO logger message number: 19
+Sun Jul  9 23:07:19 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Sun Jul  9 23:07:19 2023
+>>Info: Instantiating DeviceDatamanagerClass
+Sun Jul  9 23:07:19 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Sun Jul  9 23:07:19 2023
+>>Info: Successfully started DeviceDataManager...
+Sun Jul  9 23:07:19 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Sun Jul  9 23:07:49 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Sun Jul  9 23:07:49 2023
+>>Info: Stopping DeviceDataManager...
+Sun Jul  9 23:07:49 2023
+>>Warning: GatewayDeviceApp: Failed to stop Device Data Manager!
+Sun Jul  9 23:09:17 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Sun Jul  9 23:09:17 2023
+>>Info: Stopping DeviceDataManager...
+Sun Jul  9 23:09:17 2023
+>>Warning: GatewayDeviceApp: Failed to stop Device Data Manager!
+Sun Jul  9 23:09:48 2023
+>>Debug: This is a test DEBUG logger message
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message
+Sun Jul  9 23:09:48 2023
+>>Warning: This is a test WARNING logger message
+Sun Jul  9 23:09:48 2023
+>>Error: This is a test ERROR logger message
+Sun Jul  9 23:09:48 2023
+>>Fatal: This is a test FATAL logger message
+Sun Jul  9 23:09:48 2023
+>>Info: I am hereby testing logger reading and writing
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 1
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 3
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 5
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 7
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 0
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 9
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 11
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 13
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 2
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 15
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 17
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 4
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 19
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 6
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 8
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 10
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 12
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 14
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 16
+Sun Jul  9 23:09:48 2023
+>>Info: This is a test INFO logger message number: 18
+Sun Jul  9 23:09:48 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Sun Jul  9 23:09:48 2023
+>>Info: Instantiating DeviceDatamanagerClass
+Sun Jul  9 23:09:48 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Sun Jul  9 23:09:48 2023
+>>Info: Successfully started DeviceDataManager...
+Sun Jul  9 23:09:48 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Sun Jul  9 23:10:18 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Sun Jul  9 23:10:18 2023
+>>Info: Stopping DeviceDataManager...
+Sun Jul  9 23:10:18 2023
+>>Warning: GatewayDeviceApp: Failed to stop Device Data Manager!
+Mon Jul 10 12:20:08 2023
+>>Debug: This is a test DEBUG logger message
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message
+Mon Jul 10 12:20:08 2023
+>>Warning: This is a test WARNING logger message
+Mon Jul 10 12:20:08 2023
+>>Error: This is a test ERROR logger message
+Mon Jul 10 12:20:08 2023
+>>Fatal: This is a test FATAL logger message
+Mon Jul 10 12:20:08 2023
+>>Info: I am hereby testing logger reading and writing
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 1
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 0
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 3
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 2
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 5
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 4
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 7
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 6
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 9
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 8
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 11
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 10
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 13
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 12
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 15
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 14
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 17
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 16
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 19
+Mon Jul 10 12:20:08 2023
+>>Info: This is a test INFO logger message number: 18
+Mon Jul 10 12:20:08 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Mon Jul 10 12:20:08 2023
+>>Info: Instantiating DeviceDatamanagerClass
+Mon Jul 10 12:20:08 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Mon Jul 10 12:20:08 2023
+>>Info: Successfully started DeviceDataManager...
+Mon Jul 10 12:20:08 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Mon Jul 10 12:20:38 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Mon Jul 10 12:20:38 2023
+>>Info: Stopping DeviceDataManager...
+Mon Jul 10 12:20:38 2023
+>>Warning: GatewayDeviceApp: Failed to stop Device Data Manager!
+Mon Jul 10 12:25:01 2023
+>>Debug: This is a test DEBUG logger message
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message
+Mon Jul 10 12:25:01 2023
+>>Warning: This is a test WARNING logger message
+Mon Jul 10 12:25:01 2023
+>>Error: This is a test ERROR logger message
+Mon Jul 10 12:25:01 2023
+>>Fatal: This is a test FATAL logger message
+Mon Jul 10 12:25:01 2023
+>>Info: I am hereby testing logger reading and writing
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 1
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 0
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 3
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 5
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 2
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 7
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 4
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 9
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 6
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 11
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 8
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 13
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 10
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 15
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 12
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 17
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 14
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 19
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 16
+Mon Jul 10 12:25:01 2023
+>>Info: This is a test INFO logger message number: 18
+Mon Jul 10 12:25:01 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Mon Jul 10 12:25:01 2023
+>>Info: Instantiating DeviceDatamanagerClass
+Mon Jul 10 12:25:01 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Mon Jul 10 12:25:01 2023
+>>Info: Successfully started DeviceDataManager...
+Mon Jul 10 12:25:01 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Mon Jul 10 12:25:31 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Mon Jul 10 12:25:31 2023
+>>Info: Stopping DeviceDataManager...
+Mon Jul 10 12:25:31 2023
+>>Warning: GatewayDeviceApp: Failed to stop Device Data Manager!
+Mon Jul 10 12:32:18 2023
+>>Debug: This is a test DEBUG logger message
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message
+Mon Jul 10 12:32:18 2023
+>>Warning: This is a test WARNING logger message
+Mon Jul 10 12:32:18 2023
+>>Error: This is a test ERROR logger message
+Mon Jul 10 12:32:18 2023
+>>Fatal: This is a test FATAL logger message
+Mon Jul 10 12:32:18 2023
+>>Info: I am hereby testing logger reading and writing
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 1
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 0
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 3
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 2
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 5
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 4
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 7
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 9
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 11
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 6
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 13
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 15
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 8
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 17
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 19
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 10
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 12
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 14
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 16
+Mon Jul 10 12:32:18 2023
+>>Info: This is a test INFO logger message number: 18
+Mon Jul 10 12:32:18 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Mon Jul 10 12:32:18 2023
+>>Info: Instantiating DeviceDatamanagerClass
+Mon Jul 10 12:32:18 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Mon Jul 10 12:32:18 2023
+>>Info: Successfully started DeviceDataManager...
+Mon Jul 10 12:32:18 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Mon Jul 10 12:32:48 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Mon Jul 10 12:32:48 2023
+>>Info: Stopping DeviceDataManager...
+Mon Jul 10 12:32:48 2023
+>>Warning: GatewayDeviceApp: Failed to stop Device Data Manager!
+Mon Jul 10 14:55:24 2023
+>>Debug: This is a test DEBUG logger message
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message
+Mon Jul 10 14:55:24 2023
+>>Warning: This is a test WARNING logger message
+Mon Jul 10 14:55:24 2023
+>>Error: This is a test ERROR logger message
+Mon Jul 10 14:55:24 2023
+>>Fatal: This is a test FATAL logger message
+Mon Jul 10 14:55:24 2023
+>>Info: I am hereby testing logger reading and writing
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 1
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 0
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 3
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 5
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 2
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 7
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 4
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 9
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 6
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 11
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 8
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 13
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 10
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 15
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 12
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 17
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 14
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 19
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 16
+Mon Jul 10 14:55:24 2023
+>>Info: This is a test INFO logger message number: 18
+Mon Jul 10 14:55:24 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Mon Jul 10 14:55:24 2023
+>>Info: Instantiating DeviceDatamanagerClass
+Mon Jul 10 14:55:24 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Mon Jul 10 14:55:24 2023
+>>Info: Successfully started DeviceDataManager...
+Mon Jul 10 14:55:24 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Mon Jul 10 14:55:54 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Mon Jul 10 14:55:54 2023
+>>Info: Stopping DeviceDataManager...
+Mon Jul 10 14:55:54 2023
+>>Warning: GatewayDeviceApp: Failed to stop Device Data Manager!
+Mon Jul 10 18:50:52 2023
+>>Debug: This is a test DEBUG logger message
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message
+Mon Jul 10 18:50:52 2023
+>>Warning: This is a test WARNING logger message
+Mon Jul 10 18:50:52 2023
+>>Error: This is a test ERROR logger message
+Mon Jul 10 18:50:52 2023
+>>Fatal: This is a test FATAL logger message
+Mon Jul 10 18:50:52 2023
+>>Info: I am hereby testing logger reading and writing
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 1
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 3
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 5
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 0
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 7
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 9
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 11
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 13
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 2
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 15
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 17
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 4
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 19
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 6
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 8
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 10
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 12
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 14
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 16
+Mon Jul 10 18:50:52 2023
+>>Info: This is a test INFO logger message number: 18
+Mon Jul 10 18:50:52 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Mon Jul 10 18:50:52 2023
+>>Info: DeviceDataManager: Instantiating DeviceDatamanager Class
+Mon Jul 10 18:50:52 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Mon Jul 10 18:50:52 2023
+>>Info: DeviceDataManager: Successfully started DeviceDataManager...
+Mon Jul 10 18:50:52 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Mon Jul 10 18:51:22 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Mon Jul 10 18:51:22 2023
+>>Info: DeviceDataManager: Stopping DeviceDataManager...
+Mon Jul 10 18:51:22 2023
+>>Info: GatewayDeviceApp: GDA stopped successfully with exit code 0
+Tue Jul 18 17:29:57 2023
+>>Debug: This is a test DEBUG logger message
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message
+Tue Jul 18 17:29:57 2023
+>>Warning: This is a test WARNING logger message
+Tue Jul 18 17:29:57 2023
+>>Error: This is a test ERROR logger message
+Tue Jul 18 17:29:57 2023
+>>Fatal: This is a test FATAL logger message
+Tue Jul 18 17:29:57 2023
+>>Info: I am hereby testing logger reading and writing
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 1
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 3
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 5
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 7
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 9
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 11
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 13
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 15
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 17
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 19
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 0
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 2
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 4
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 6
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 8
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 10
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 12
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 14
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 16
+Tue Jul 18 17:29:57 2023
+>>Info: This is a test INFO logger message number: 18
+Tue Jul 18 17:30:04 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Tue Jul 18 17:30:04 2023
+>>Info: DeviceDataManager: Instantiating DeviceDatamanager Class
+Tue Jul 18 17:30:04 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Tue Jul 18 17:30:04 2023
+>>Info: DeviceDataManager: Successfully started DeviceDataManager...
+Tue Jul 18 17:30:04 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Tue Jul 18 17:30:34 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Tue Jul 18 17:30:34 2023
+>>Info: DeviceDataManager: Stopping DeviceDataManager...
+Tue Jul 18 17:30:34 2023
+>>Info: GatewayDeviceApp: GDA stopped successfully with exit code 0
+Thu Jul 20 12:52:53 2023
+>>Debug: This is a test DEBUG logger message
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message
+Thu Jul 20 12:52:53 2023
+>>Warning: This is a test WARNING logger message
+Thu Jul 20 12:52:53 2023
+>>Error: This is a test ERROR logger message
+Thu Jul 20 12:52:53 2023
+>>Fatal: This is a test FATAL logger message
+Thu Jul 20 12:52:53 2023
+>>Info: I am hereby testing logger reading and writing
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 1
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 3
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 5
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 7
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 9
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 11
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 13
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 15
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 17
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 19
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 0
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 2
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 4
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 6
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 8
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 10
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 12
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 14
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 16
+Thu Jul 20 12:52:53 2023
+>>Info: This is a test INFO logger message number: 18
+Thu Jul 20 12:52:53 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Thu Jul 20 12:52:53 2023
+>>Info: DeviceDataManager: Instantiating DeviceDatamanager Class
+Thu Jul 20 12:52:53 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Thu Jul 20 12:52:53 2023
+>>Info: DeviceDataManager: Successfully started DeviceDataManager...
+Thu Jul 20 12:52:53 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Thu Jul 20 12:53:23 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Thu Jul 20 12:53:23 2023
+>>Info: DeviceDataManager: Stopping DeviceDataManager...
+Thu Jul 20 12:53:23 2023
+>>Info: GatewayDeviceApp: GDA stopped successfully with exit code 0
+Mon Jul 24 10:12:31 2023
+>>Debug: This is a test DEBUG logger message
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message
+Mon Jul 24 10:12:31 2023
+>>Warning: This is a test WARNING logger message
+Mon Jul 24 10:12:31 2023
+>>Error: This is a test ERROR logger message
+Mon Jul 24 10:12:31 2023
+>>Fatal: This is a test FATAL logger message
+Mon Jul 24 10:12:31 2023
+>>Info: I am hereby testing logger reading and writing
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 1
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 3
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 5
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 0
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 7
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 9
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 11
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 2
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 13
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 15
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 4
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 17
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 19
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 6
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 8
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 10
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 12
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 14
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 16
+Mon Jul 24 10:12:31 2023
+>>Info: This is a test INFO logger message number: 18
+Mon Jul 24 10:12:31 2023
+>>Info: GatewayDeviceApp: Initializing GDA
+Mon Jul 24 10:12:31 2023
+>>Info: DeviceDataManager: Instantiating DeviceDatamanager Class
+Mon Jul 24 10:12:31 2023
+>>Info: GatewayDeviceApp: Starting GDA
+Mon Jul 24 10:12:31 2023
+>>Info: DeviceDataManager: Successfully started DeviceDataManager...
+Mon Jul 24 10:12:31 2023
+>>Info: GatewayDeviceApp: GDA started successfully.
+Mon Jul 24 10:13:01 2023
+>>Info: GatewayDeviceApp: Stopping GDA...
+Mon Jul 24 10:13:01 2023
+>>Info: DeviceDataManager: Stopping DeviceDataManager...
+Mon Jul 24 10:13:01 2023
+>>Info: GatewayDeviceApp: GDA stopped successfully with exit code 0

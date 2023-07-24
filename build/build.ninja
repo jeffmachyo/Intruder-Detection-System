@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: loggerTest
+# Project: gdaTest
 # Configurations: Debug
 # =============================================================================
 
@@ -40,110 +40,228 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target custom_log
+
+#############################################
+# Utility command for Experimental
+
+build Experimental: phony CMakeFiles/Experimental
 
 
 #############################################
-# Order-only phony target for custom_log
+# Utility command for Nightly
 
-build cmake_object_order_depends_target_custom_log: phony || CMakeFiles/custom_log.dir
+build Nightly: phony CMakeFiles/Nightly
 
-build CMakeFiles/custom_log.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o: CXX_COMPILER__custom_log_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp || cmake_object_order_depends_target_custom_log
-  DEP_FILE = CMakeFiles/custom_log.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o.d
+
+#############################################
+# Utility command for Continuous
+
+build Continuous: phony CMakeFiles/Continuous
+
+
+#############################################
+# Utility command for NightlyMemoryCheck
+
+build NightlyMemoryCheck: phony CMakeFiles/NightlyMemoryCheck
+
+
+#############################################
+# Utility command for NightlyStart
+
+build NightlyStart: phony CMakeFiles/NightlyStart
+
+
+#############################################
+# Utility command for NightlyUpdate
+
+build NightlyUpdate: phony CMakeFiles/NightlyUpdate
+
+
+#############################################
+# Utility command for NightlyConfigure
+
+build NightlyConfigure: phony CMakeFiles/NightlyConfigure
+
+
+#############################################
+# Utility command for NightlyBuild
+
+build NightlyBuild: phony CMakeFiles/NightlyBuild
+
+
+#############################################
+# Utility command for NightlyTest
+
+build NightlyTest: phony CMakeFiles/NightlyTest
+
+
+#############################################
+# Utility command for NightlyCoverage
+
+build NightlyCoverage: phony CMakeFiles/NightlyCoverage
+
+
+#############################################
+# Utility command for NightlyMemCheck
+
+build NightlyMemCheck: phony CMakeFiles/NightlyMemCheck
+
+
+#############################################
+# Utility command for NightlySubmit
+
+build NightlySubmit: phony CMakeFiles/NightlySubmit
+
+
+#############################################
+# Utility command for ExperimentalStart
+
+build ExperimentalStart: phony CMakeFiles/ExperimentalStart
+
+
+#############################################
+# Utility command for ExperimentalUpdate
+
+build ExperimentalUpdate: phony CMakeFiles/ExperimentalUpdate
+
+
+#############################################
+# Utility command for ExperimentalConfigure
+
+build ExperimentalConfigure: phony CMakeFiles/ExperimentalConfigure
+
+
+#############################################
+# Utility command for ExperimentalBuild
+
+build ExperimentalBuild: phony CMakeFiles/ExperimentalBuild
+
+
+#############################################
+# Utility command for ExperimentalTest
+
+build ExperimentalTest: phony CMakeFiles/ExperimentalTest
+
+
+#############################################
+# Utility command for ExperimentalCoverage
+
+build ExperimentalCoverage: phony CMakeFiles/ExperimentalCoverage
+
+
+#############################################
+# Utility command for ExperimentalMemCheck
+
+build ExperimentalMemCheck: phony CMakeFiles/ExperimentalMemCheck
+
+
+#############################################
+# Utility command for ExperimentalSubmit
+
+build ExperimentalSubmit: phony CMakeFiles/ExperimentalSubmit
+
+
+#############################################
+# Utility command for ContinuousStart
+
+build ContinuousStart: phony CMakeFiles/ContinuousStart
+
+
+#############################################
+# Utility command for ContinuousUpdate
+
+build ContinuousUpdate: phony CMakeFiles/ContinuousUpdate
+
+
+#############################################
+# Utility command for ContinuousConfigure
+
+build ContinuousConfigure: phony CMakeFiles/ContinuousConfigure
+
+
+#############################################
+# Utility command for ContinuousBuild
+
+build ContinuousBuild: phony CMakeFiles/ContinuousBuild
+
+
+#############################################
+# Utility command for ContinuousTest
+
+build ContinuousTest: phony CMakeFiles/ContinuousTest
+
+
+#############################################
+# Utility command for ContinuousCoverage
+
+build ContinuousCoverage: phony CMakeFiles/ContinuousCoverage
+
+
+#############################################
+# Utility command for ContinuousMemCheck
+
+build ContinuousMemCheck: phony CMakeFiles/ContinuousMemCheck
+
+
+#############################################
+# Utility command for ContinuousSubmit
+
+build ContinuousSubmit: phony CMakeFiles/ContinuousSubmit
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gda_app
+
+
+#############################################
+# Order-only phony target for gda_app
+
+build cmake_object_order_depends_target_gda_app: phony || CMakeFiles/gda_app.dir
+
+build CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/gateway_device_app.cpp.o: CXX_COMPILER__gda_app_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/gateway_device_app.cpp || cmake_object_order_depends_target_gda_app
+  DEP_FILE = CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/gateway_device_app.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/test_lib -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log
-  OBJECT_DIR = CMakeFiles/custom_log.dir
-  OBJECT_FILE_DIR = CMakeFiles/custom_log.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log
+  OBJECT_DIR = CMakeFiles/gda_app.dir
+  OBJECT_FILE_DIR = CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app
+
+build CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/device_data_manager.cpp.o: CXX_COMPILER__gda_app_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/device_data_manager.cpp || cmake_object_order_depends_target_gda_app
+  DEP_FILE = CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/device_data_manager.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/gda_app.dir
+  OBJECT_FILE_DIR = CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app
+
+build CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o: CXX_COMPILER__gda_app_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp || cmake_object_order_depends_target_gda_app
+  DEP_FILE = CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/gda_app.dir
+  OBJECT_FILE_DIR = CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log
+
+build CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/base_iot_data.cpp.o: CXX_COMPILER__gda_app_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/base_iot_data.cpp || cmake_object_order_depends_target_gda_app
+  DEP_FILE = CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/base_iot_data.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/gda_app.dir
+  OBJECT_FILE_DIR = CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data
+
+build CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/sensor_data.cpp.o: CXX_COMPILER__gda_app_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/sensor_data.cpp || cmake_object_order_depends_target_gda_app
+  DEP_FILE = CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/sensor_data.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/gda_app.dir
+  OBJECT_FILE_DIR = CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target custom_log
+# Link build statements for STATIC_LIBRARY target gda_app
 
 
 #############################################
-# Link the static library libcustom_log.a
+# Link the static library libgda_app.a
 
-build libcustom_log.a: CXX_STATIC_LIBRARY_LINKER__custom_log_Debug CMakeFiles/custom_log.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o
+build libgda_app.a: CXX_STATIC_LIBRARY_LINKER__gda_app_Debug CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/gateway_device_app.cpp.o CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app/device_data_manager.cpp.o CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/base_iot_data.cpp.o CMakeFiles/gda_app.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data/sensor_data.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = CMakeFiles/custom_log.dir
+  OBJECT_DIR = CMakeFiles/gda_app.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = libcustom_log.a
-  TARGET_PDB = custom_log.a.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target loggerTest
-
-
-#############################################
-# Order-only phony target for loggerTest
-
-build cmake_object_order_depends_target_loggerTest: phony || cmake_object_order_depends_target_custom_log
-
-build CMakeFiles/loggerTest.dir/loggerTest.cpp.o: CXX_COMPILER__loggerTest_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/loggerTest.cpp || cmake_object_order_depends_target_loggerTest
-  DEP_FILE = CMakeFiles/loggerTest.dir/loggerTest.cpp.o.d
-  FLAGS = -g -DGTEST_HAS_PTHREAD=1
-  INCLUDES = -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/test_lib -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log -I/home/jeff/local/googletest
-  OBJECT_DIR = CMakeFiles/loggerTest.dir
-  OBJECT_FILE_DIR = CMakeFiles/loggerTest.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target loggerTest
-
-
-#############################################
-# Link the executable loggerTest
-
-build loggerTest: CXX_EXECUTABLE_LINKER__loggerTest_Debug CMakeFiles/loggerTest.dir/loggerTest.cpp.o | libcustom_log.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || libcustom_log.a
-  FLAGS = -g
-  LINK_LIBRARIES = libcustom_log.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
-  OBJECT_DIR = CMakeFiles/loggerTest.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = loggerTest
-  TARGET_PDB = loggerTest.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target runSimpleTests
-
-
-#############################################
-# Order-only phony target for runSimpleTests
-
-build cmake_object_order_depends_target_runSimpleTests: phony || CMakeFiles/runSimpleTests.dir
-
-build CMakeFiles/runSimpleTests.dir/loggerTest.cpp.o: CXX_COMPILER__runSimpleTests_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/loggerTest.cpp || cmake_object_order_depends_target_runSimpleTests
-  DEP_FILE = CMakeFiles/runSimpleTests.dir/loggerTest.cpp.o.d
-  FLAGS = -g -DGTEST_HAS_PTHREAD=1
-  INCLUDES = -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/test_lib
-  OBJECT_DIR = CMakeFiles/runSimpleTests.dir
-  OBJECT_FILE_DIR = CMakeFiles/runSimpleTests.dir
-
-build CMakeFiles/runSimpleTests.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o: CXX_COMPILER__runSimpleTests_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp || cmake_object_order_depends_target_runSimpleTests
-  DEP_FILE = CMakeFiles/runSimpleTests.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o.d
-  FLAGS = -g -DGTEST_HAS_PTHREAD=1
-  INCLUDES = -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/test_lib
-  OBJECT_DIR = CMakeFiles/runSimpleTests.dir
-  OBJECT_FILE_DIR = CMakeFiles/runSimpleTests.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target runSimpleTests
-
-
-#############################################
-# Link the executable runSimpleTests
-
-build runSimpleTests: CXX_EXECUTABLE_LINKER__runSimpleTests_Debug CMakeFiles/runSimpleTests.dir/loggerTest.cpp.o CMakeFiles/runSimpleTests.dir/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log/custom_log.cpp.o | /usr/lib/x86_64-linux-gnu/libgtest.a
-  FLAGS = -g
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libgtest.a  -lgtest_main  -lpthread
-  OBJECT_DIR = CMakeFiles/runSimpleTests.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = runSimpleTests
-  TARGET_PDB = runSimpleTests.dbg
+  TARGET_FILE = libgda_app.a
+  TARGET_PDB = gda_app.a.dbg
 
 
 #############################################
@@ -173,17 +291,541 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/cmake --regenerate-during-build -S/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log -B/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/cmake --regenerate-during-build -S/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test -B/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Custom command for CMakeFiles/Experimental
+
+build CMakeFiles/Experimental | ${cmake_ninja_workdir}CMakeFiles/Experimental: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D Experimental
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/Nightly
+
+build CMakeFiles/Nightly | ${cmake_ninja_workdir}CMakeFiles/Nightly: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D Nightly
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/Continuous
+
+build CMakeFiles/Continuous | ${cmake_ninja_workdir}CMakeFiles/Continuous: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D Continuous
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyMemoryCheck
+
+build CMakeFiles/NightlyMemoryCheck | ${cmake_ninja_workdir}CMakeFiles/NightlyMemoryCheck: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D NightlyMemoryCheck
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyStart
+
+build CMakeFiles/NightlyStart | ${cmake_ninja_workdir}CMakeFiles/NightlyStart: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D NightlyStart
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyUpdate
+
+build CMakeFiles/NightlyUpdate | ${cmake_ninja_workdir}CMakeFiles/NightlyUpdate: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D NightlyUpdate
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyConfigure
+
+build CMakeFiles/NightlyConfigure | ${cmake_ninja_workdir}CMakeFiles/NightlyConfigure: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D NightlyConfigure
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyBuild
+
+build CMakeFiles/NightlyBuild | ${cmake_ninja_workdir}CMakeFiles/NightlyBuild: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D NightlyBuild
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyTest
+
+build CMakeFiles/NightlyTest | ${cmake_ninja_workdir}CMakeFiles/NightlyTest: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D NightlyTest
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyCoverage
+
+build CMakeFiles/NightlyCoverage | ${cmake_ninja_workdir}CMakeFiles/NightlyCoverage: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D NightlyCoverage
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyMemCheck
+
+build CMakeFiles/NightlyMemCheck | ${cmake_ninja_workdir}CMakeFiles/NightlyMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D NightlyMemCheck
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlySubmit
+
+build CMakeFiles/NightlySubmit | ${cmake_ninja_workdir}CMakeFiles/NightlySubmit: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D NightlySubmit
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalStart
+
+build CMakeFiles/ExperimentalStart | ${cmake_ninja_workdir}CMakeFiles/ExperimentalStart: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ExperimentalStart
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalUpdate
+
+build CMakeFiles/ExperimentalUpdate | ${cmake_ninja_workdir}CMakeFiles/ExperimentalUpdate: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ExperimentalUpdate
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalConfigure
+
+build CMakeFiles/ExperimentalConfigure | ${cmake_ninja_workdir}CMakeFiles/ExperimentalConfigure: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ExperimentalConfigure
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalBuild
+
+build CMakeFiles/ExperimentalBuild | ${cmake_ninja_workdir}CMakeFiles/ExperimentalBuild: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ExperimentalBuild
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalTest
+
+build CMakeFiles/ExperimentalTest | ${cmake_ninja_workdir}CMakeFiles/ExperimentalTest: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ExperimentalTest
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalCoverage
+
+build CMakeFiles/ExperimentalCoverage | ${cmake_ninja_workdir}CMakeFiles/ExperimentalCoverage: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ExperimentalCoverage
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalMemCheck
+
+build CMakeFiles/ExperimentalMemCheck | ${cmake_ninja_workdir}CMakeFiles/ExperimentalMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ExperimentalMemCheck
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalSubmit
+
+build CMakeFiles/ExperimentalSubmit | ${cmake_ninja_workdir}CMakeFiles/ExperimentalSubmit: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ExperimentalSubmit
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousStart
+
+build CMakeFiles/ContinuousStart | ${cmake_ninja_workdir}CMakeFiles/ContinuousStart: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ContinuousStart
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousUpdate
+
+build CMakeFiles/ContinuousUpdate | ${cmake_ninja_workdir}CMakeFiles/ContinuousUpdate: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ContinuousUpdate
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousConfigure
+
+build CMakeFiles/ContinuousConfigure | ${cmake_ninja_workdir}CMakeFiles/ContinuousConfigure: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ContinuousConfigure
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousBuild
+
+build CMakeFiles/ContinuousBuild | ${cmake_ninja_workdir}CMakeFiles/ContinuousBuild: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ContinuousBuild
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousTest
+
+build CMakeFiles/ContinuousTest | ${cmake_ninja_workdir}CMakeFiles/ContinuousTest: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ContinuousTest
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousCoverage
+
+build CMakeFiles/ContinuousCoverage | ${cmake_ninja_workdir}CMakeFiles/ContinuousCoverage: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ContinuousCoverage
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousMemCheck
+
+build CMakeFiles/ContinuousMemCheck | ${cmake_ninja_workdir}CMakeFiles/ContinuousMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ContinuousMemCheck
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousSubmit
+
+build CMakeFiles/ContinuousSubmit | ${cmake_ninja_workdir}CMakeFiles/ContinuousSubmit: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build && /usr/bin/ctest -D ContinuousSubmit
+  pool = console
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target loggerTest
+
+
+#############################################
+# Order-only phony target for loggerTest
+
+build cmake_object_order_depends_target_loggerTest: phony || cmake_object_order_depends_target_gda_app
+
+build unit/common/log/CMakeFiles/loggerTest.dir/loggerTest.cpp.o: CXX_COMPILER__loggerTest_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/loggerTest.cpp || cmake_object_order_depends_target_loggerTest
+  DEP_FILE = unit/common/log/CMakeFiles/loggerTest.dir/loggerTest.cpp.o.d
+  FLAGS = -g -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/common/log -I/home/jeff/local/googletest
+  OBJECT_DIR = unit/common/log/CMakeFiles/loggerTest.dir
+  OBJECT_FILE_DIR = unit/common/log/CMakeFiles/loggerTest.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target loggerTest
+
+
+#############################################
+# Link the executable unit/common/log/loggerTest
+
+build unit/common/log/loggerTest: CXX_EXECUTABLE_LINKER__loggerTest_Debug unit/common/log/CMakeFiles/loggerTest.dir/loggerTest.cpp.o | libgda_app.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || libgda_app.a
+  FLAGS = -g
+  LINK_LIBRARIES = libgda_app.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
+  OBJECT_DIR = unit/common/log/CMakeFiles/loggerTest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unit/common/log/loggerTest
+  TARGET_PDB = loggerTest.dbg
+
+
+#############################################
+# Utility command for test
+
+build unit/common/log/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/common/log && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build unit/common/log/test: phony unit/common/log/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build unit/common/log/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/common/log && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build unit/common/log/edit_cache: phony unit/common/log/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build unit/common/log/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/common/log && /usr/bin/cmake --regenerate-during-build -S/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test -B/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build unit/common/log/rebuild_cache: phony unit/common/log/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target gatewayDeviceAppTest
+
+
+#############################################
+# Order-only phony target for gatewayDeviceAppTest
+
+build cmake_object_order_depends_target_gatewayDeviceAppTest: phony || cmake_object_order_depends_target_gda_app
+
+build integration/app/CMakeFiles/gatewayDeviceAppTest.dir/gatewayDeviceAppTest.cpp.o: CXX_COMPILER__gatewayDeviceAppTest_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/integration/app/gatewayDeviceAppTest.cpp || cmake_object_order_depends_target_gatewayDeviceAppTest
+  DEP_FILE = integration/app/CMakeFiles/gatewayDeviceAppTest.dir/gatewayDeviceAppTest.cpp.o.d
+  FLAGS = -g -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/app -I/home/jeff/local/googletest
+  OBJECT_DIR = integration/app/CMakeFiles/gatewayDeviceAppTest.dir
+  OBJECT_FILE_DIR = integration/app/CMakeFiles/gatewayDeviceAppTest.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target gatewayDeviceAppTest
+
+
+#############################################
+# Link the executable integration/app/gatewayDeviceAppTest
+
+build integration/app/gatewayDeviceAppTest: CXX_EXECUTABLE_LINKER__gatewayDeviceAppTest_Debug integration/app/CMakeFiles/gatewayDeviceAppTest.dir/gatewayDeviceAppTest.cpp.o | libgda_app.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || libgda_app.a
+  FLAGS = -g
+  LINK_LIBRARIES = libgda_app.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
+  OBJECT_DIR = integration/app/CMakeFiles/gatewayDeviceAppTest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = integration/app/gatewayDeviceAppTest
+  TARGET_PDB = gatewayDeviceAppTest.dbg
+
+
+#############################################
+# Utility command for test
+
+build integration/app/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/integration/app && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build integration/app/test: phony integration/app/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build integration/app/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/integration/app && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build integration/app/edit_cache: phony integration/app/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build integration/app/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/integration/app && /usr/bin/cmake --regenerate-during-build -S/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test -B/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build integration/app/rebuild_cache: phony integration/app/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target baseIotTest
+
+
+#############################################
+# Order-only phony target for baseIotTest
+
+build cmake_object_order_depends_target_baseIotTest: phony || cmake_object_order_depends_target_gda_app
+
+build unit/data/CMakeFiles/baseIotTest.dir/baseIotTest.cpp.o: CXX_COMPILER__baseIotTest_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/data/baseIotTest.cpp || cmake_object_order_depends_target_baseIotTest
+  DEP_FILE = unit/data/CMakeFiles/baseIotTest.dir/baseIotTest.cpp.o.d
+  FLAGS = -g -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data -I/home/jeff/local/googletest
+  OBJECT_DIR = unit/data/CMakeFiles/baseIotTest.dir
+  OBJECT_FILE_DIR = unit/data/CMakeFiles/baseIotTest.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target baseIotTest
+
+
+#############################################
+# Link the executable unit/data/baseIotTest
+
+build unit/data/baseIotTest: CXX_EXECUTABLE_LINKER__baseIotTest_Debug unit/data/CMakeFiles/baseIotTest.dir/baseIotTest.cpp.o | libgda_app.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || libgda_app.a
+  FLAGS = -g
+  LINK_LIBRARIES = libgda_app.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
+  OBJECT_DIR = unit/data/CMakeFiles/baseIotTest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unit/data/baseIotTest
+  TARGET_PDB = baseIotTest.dbg
+
+
+#############################################
+# Utility command for test
+
+build unit/data/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/data && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build unit/data/test: phony unit/data/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build unit/data/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/data && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build unit/data/edit_cache: phony unit/data/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build unit/data/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/data && /usr/bin/cmake --regenerate-during-build -S/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test -B/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build unit/data/rebuild_cache: phony unit/data/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target sensorDataTest
+
+
+#############################################
+# Order-only phony target for sensorDataTest
+
+build cmake_object_order_depends_target_sensorDataTest: phony || cmake_object_order_depends_target_gda_app
+
+build unit/data/sensorData/CMakeFiles/sensorDataTest.dir/sensorDataTest.cpp.o: CXX_COMPILER__sensorDataTest_Debug /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/data/sensorData/sensorDataTest.cpp || cmake_object_order_depends_target_sensorDataTest
+  DEP_FILE = unit/data/sensorData/CMakeFiles/sensorDataTest.dir/sensorDataTest.cpp.o.d
+  FLAGS = -g -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Src/data -I/home/jeff/local/googletest
+  OBJECT_DIR = unit/data/sensorData/CMakeFiles/sensorDataTest.dir
+  OBJECT_FILE_DIR = unit/data/sensorData/CMakeFiles/sensorDataTest.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target sensorDataTest
+
+
+#############################################
+# Link the executable unit/data/sensorData/sensorDataTest
+
+build unit/data/sensorData/sensorDataTest: CXX_EXECUTABLE_LINKER__sensorDataTest_Debug unit/data/sensorData/CMakeFiles/sensorDataTest.dir/sensorDataTest.cpp.o | libgda_app.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || libgda_app.a
+  FLAGS = -g
+  LINK_LIBRARIES = libgda_app.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
+  OBJECT_DIR = unit/data/sensorData/CMakeFiles/sensorDataTest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unit/data/sensorData/sensorDataTest
+  TARGET_PDB = sensorDataTest.dbg
+
+
+#############################################
+# Utility command for test
+
+build unit/data/sensorData/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/data/sensorData && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build unit/data/sensorData/test: phony unit/data/sensorData/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build unit/data/sensorData/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/data/sensorData && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build unit/data/sensorData/edit_cache: phony unit/data/sensorData/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build unit/data/sensorData/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/data/sensorData && /usr/bin/cmake --regenerate-during-build -S/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test -B/home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build unit/data/sensorData/rebuild_cache: phony unit/data/sensorData/CMakeFiles/rebuild_cache.util
+
 # =============================================================================
 # Target aliases.
 
-build custom_log: phony libcustom_log.a
+build baseIotTest: phony unit/data/baseIotTest
+
+build gatewayDeviceAppTest: phony integration/app/gatewayDeviceAppTest
+
+build gda_app: phony libgda_app.a
+
+build loggerTest: phony unit/common/log/loggerTest
+
+build sensorDataTest: phony unit/data/sensorData/sensorDataTest
 
 # =============================================================================
 # Folder targets.
@@ -193,7 +835,35 @@ build custom_log: phony libcustom_log.a
 #############################################
 # Folder: /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build
 
-build all: phony libcustom_log.a loggerTest runSimpleTests
+build all: phony libgda_app.a unit/common/log/all integration/app/all unit/data/all unit/data/sensorData/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/integration/app
+
+build integration/app/all: phony integration/app/gatewayDeviceAppTest
+
+# =============================================================================
+
+#############################################
+# Folder: /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/common/log
+
+build unit/common/log/all: phony unit/common/log/loggerTest
+
+# =============================================================================
+
+#############################################
+# Folder: /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/data
+
+build unit/data/all: phony unit/data/baseIotTest
+
+# =============================================================================
+
+#############################################
+# Folder: /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/build/unit/data/sensorData
+
+build unit/data/sensorData/all: phony unit/data/sensorData/sensorDataTest
 
 # =============================================================================
 # Built-in targets
@@ -202,14 +872,14 @@ build all: phony libcustom_log.a loggerTest runSimpleTests
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindGTest.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/GoogleTest.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/CMakeLists.txt /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/integration/app/CMakeLists.txt /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/CMakeLists.txt /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/data/CMakeLists.txt /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/data/sensorData/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CTest.cmake /usr/share/cmake-3.22/Modules/CTestTargets.cmake /usr/share/cmake-3.22/Modules/CTestUseLaunchers.cmake /usr/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/DartConfiguration.tcl.in /usr/share/cmake-3.22/Modules/FindGTest.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/GoogleTest.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindGTest.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/GoogleTest.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
+build /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/CMakeLists.txt /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/integration/app/CMakeLists.txt /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/common/log/CMakeLists.txt /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/data/CMakeLists.txt /home/jeff/STM32CubeIDE/workspace_1.12.1/Intruder-Detection-System/GatewayDeviceApp/Test/unit/data/sensorData/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CTest.cmake /usr/share/cmake-3.22/Modules/CTestTargets.cmake /usr/share/cmake-3.22/Modules/CTestUseLaunchers.cmake /usr/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/DartConfiguration.tcl.in /usr/share/cmake-3.22/Modules/FindGTest.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/GoogleTest.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
 
 
 #############################################
