@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Site BuildName="Linux-g++"
-	BuildStamp="20230724-0059-Experimental"
+	BuildStamp="20231224-1536-Experimental"
 	Name="jeff-pc"
 	Generator="ctest-3.22.1"
 	CompilerName="/usr/bin/g++"
 	CompilerVersion="11.3.0"
 	OSName="Linux"
 	Hostname="jeff-pc"
-	OSRelease="5.19.0-42-generic"
-	OSVersion="#43~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Apr 21 16:51:08 UTC 2"
+	OSRelease="6.2.0-39-generic"
+	OSVersion="#40~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Nov 16 10:53:04 UTC 2"
 	OSPlatform="x86_64"
 	Is64Bits="1"
 	VendorString="GenuineIntel"
@@ -19,16 +19,16 @@
 	NumberOfLogicalCPU="12"
 	NumberOfPhysicalCPU="10"
 	TotalVirtualMemory="0"
-	TotalPhysicalMemory="15669"
+	TotalPhysicalMemory="15653"
 	LogicalProcessorsPerPhysical="1"
-	ProcessorClockFrequency="3130.23"
+	ProcessorClockFrequency="3582.74"
 	>
 	<Testing>
-		<StartDateTime>Jul 24 13:37 EDT</StartDateTime>
-		<StartTestTime>1690220224</StartTestTime>
+		<StartDateTime>Dec 24 10:36 EST</StartDateTime>
+		<StartTestTime>1703432180</StartTestTime>
 		<TestList/>
-		<EndDateTime>Jul 24 13:37 EDT</EndDateTime>
-		<EndTestTime>1690220224</EndTestTime>
+		<EndDateTime>Dec 24 10:36 EST</EndDateTime>
+		<EndTestTime>1703432180</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

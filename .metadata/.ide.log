@@ -1,56 +1,36 @@
-2023-06-30 12:02:14,332 [INFO] Activator:176 - 
+2024-01-08 12:14:17,176 [INFO] Activator:176 - 
 
 
-2023-06-30 12:02:14,335 [INFO] Activator:177 - !SESSION log4j initialized
-2023-06-30 12:02:17,505 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
-2023-06-30 12:02:48,844 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-2023-06-30 12:02:48,844 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
-2023-06-30 12:02:48,844 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-2023-06-30 15:04:16,766 [INFO] Activator:176 - 
+2024-01-08 12:14:17,179 [INFO] Activator:177 - !SESSION log4j initialized
+2024-01-08 12:14:20,228 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-01-08 12:15:00,655 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-01-08 12:15:00,655 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-01-08 12:15:00,656 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-01-08 12:22:32,803 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 12:22:32,805 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 12:22:32,806 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 12:22:32,807 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 12:22:32,807 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 12:22:32,821 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 12:22:32,821 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 12:22:32,822 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 12:22:32,822 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 12:22:32,822 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 16:33:35,361 [INFO] Activator:176 - 
 
 
-2023-06-30 15:04:16,767 [INFO] Activator:177 - !SESSION log4j initialized
-2023-06-30 15:04:19,884 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
-2023-06-30 15:04:41,382 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-2023-06-30 15:04:41,382 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
-2023-06-30 15:04:41,383 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-2023-06-30 15:52:25,849 [INFO] Activator:176 - 
-
-
-2023-06-30 15:52:25,851 [INFO] Activator:177 - !SESSION log4j initialized
-2023-06-30 15:52:29,060 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
-2023-06-30 15:53:05,496 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-2023-06-30 15:53:05,497 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
-2023-06-30 15:53:05,497 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-2023-06-30 20:29:26,753 [INFO] Activator:176 - 
-
-
-2023-06-30 20:29:26,754 [INFO] Activator:177 - !SESSION log4j initialized
-2023-06-30 20:29:29,070 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
-2023-06-30 20:29:50,121 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-2023-06-30 20:29:50,122 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
-2023-06-30 20:29:50,122 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-2023-06-30 20:30:35,655 [INFO] Activator:176 - 
-
-
-2023-06-30 20:30:35,656 [INFO] Activator:177 - !SESSION log4j initialized
-2023-06-30 20:30:38,039 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
-2023-06-30 20:31:04,389 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-2023-06-30 20:31:04,390 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
-2023-06-30 20:31:04,390 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-2023-06-30 20:35:34,433 [INFO] Activator:176 - 
-
-
-2023-06-30 20:35:34,434 [INFO] Activator:177 - !SESSION log4j initialized
-2023-06-30 20:35:37,022 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
-2023-06-30 20:36:03,069 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-2023-06-30 20:36:03,070 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
-2023-06-30 20:36:03,070 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-2023-06-30 20:51:52,296 [INFO] Activator:176 - 
-
-
-2023-06-30 20:51:52,297 [INFO] Activator:177 - !SESSION log4j initialized
-2023-06-30 20:51:55,503 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
-2023-06-30 20:52:27,019 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-2023-06-30 20:52:27,019 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
-2023-06-30 20:52:27,019 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-01-08 16:33:35,362 [INFO] Activator:177 - !SESSION log4j initialized
+2024-01-08 16:33:38,430 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-01-08 16:34:18,885 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-01-08 16:34:18,886 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-01-08 16:34:18,886 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-01-08 16:35:32,514 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 16:35:32,515 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 16:35:32,515 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 16:35:32,516 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 16:35:32,516 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 16:35:32,525 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 16:35:32,526 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 16:35:32,526 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 16:35:32,526 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
+2024-01-08 16:35:32,526 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.ConnectException: Connection refused (Connection refused)
